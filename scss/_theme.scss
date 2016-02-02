@@ -1,0 +1,14 @@
+
+// Theme variables
+@import 'global-settings';
+
+// import required files
+@import '../node_modules/vanilla-framework/scss/vanilla';
+
+/// cloud element styles
+@import 'modules/base';
+
+@mixin cloud-vanilla-theme {
+  @include vanilla;
+  @include boilerplate-base;
+}

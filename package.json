@@ -1,0 +1,51 @@
+{
+  "name": "docs-vanilla-theme",
+  "version": "0.0.1",
+  "description": "The Vanilla theme for documentation, style guides and APIs",
+  "author": {
+    "name": "Anthony Dillon",
+    "email": "anthony.dillon@canonical.com",
+    "url": ""
+  },
+  "contributors": [
+    {
+      "name": "Anthony Dillon",
+      "email": "anthony.dillon@canonical.com"
+    }
+  ],
+  "keywords": [
+    "vanilla",
+    "framework",
+    "docs",
+    "style guide",
+    "APIs"
+  ],
+  "bugs": {
+    "url" : "http://github.com/ubuntudesign/docs-vanilla-theme/issues",
+    "email": "webteam@canonical.com"
+  },
+  "license" : "LGPL-3.0",
+  "scripts": {
+    "prepublish": "./.install_dependencies.sh",
+    "clean": "rm -r build; rm -r node_modules"
+  },
+  "repository": {
+  "type" : "git",
+  "url" : "https://github.com/ubuntudesign/boilerplate-vanilla-theme"
+  },
+  "devDependencies": {
+    "gulp": "3.9",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-cache": "0.2.8",
+    "gulp-minify-css": "0.4.6",
+    "gulp-notify": "2.2.0",
+    "gulp-rename": "1.2.0",
+    "gulp-sass": "2.1.1",
+    "gulp-scss-lint": "0.1.10",
+    "sassdoc": "2.1.7",
+    "gulp-util": "3.0.4"
+  },
+  "dependencies": {
+     "vanilla-framework": "0.0.60"
+  }
+}
