@@ -1,0 +1,54 @@
+////
+/// @author       Anthony Dillon
+/// @link
+/// @since        0.0.1
+////
+
+/// Header styling for docs theme. Float left
+/// @group Utils
+@mixin docs-header {
+  .banner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: $navigation-width;
+    width: $navigation-width;
+    float: left;
+    height: 100%;
+    overflow-y: auto;
+
+    .logo {
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+
+    .nav-primary ul {
+      width: 100%;
+
+      li {
+        float: none;
+        display: block;
+        overflow: hidden;
+
+        a,
+        a:link,
+        a:visited {
+          text-align: left;
+        }
+      }
+
+      .second-level-nav {
+        background: darken($brand-color, 10%);
+        display: none;
+        margin-bottom: 1em;
+      }
+
+      &:hover {
+
+        .second-level-nav {
+          display: block;
+        }
+      }
+    }
+  }
+}

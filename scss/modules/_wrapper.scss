@@ -1,0 +1,15 @@
+////
+/// @author       Anthony Dillon
+/// @link
+/// @since        0.0.1
+////
+
+/// Page layout styles
+/// @group Layout
+@mixin docs-wrapper {
+  .wrapper .inner-wrapper {
+    max-width: calc(100% - 240px);
+    padding-left: 240px;
+    box-sizing: border-box;
+  }
+}

@@ -8,11 +8,18 @@
     <meta name="author" content="Canonical webteam" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Vanilla framework | pattern library</title>
+    <title>Docs Vanilla theme | pattern library</title>
 
     <!-- stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="../build/css/build.css" />
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic%7CUbuntu+Mono' rel='stylesheet' type='text/css' />
+
+    <style>
+        #grid .box,
+        #nested-grid .box {
+            border: 1px solid #888;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,29 +56,6 @@
     </header>
     <div class="wrapper">
         <div id="main-content" class="inner-wrapper">
-            <nav role="navigation" class="nav-secondary clearfix" id="breadcrumbs">
-                <ul class="breadcrumb">
-                    <li>
-                        <a href="#" class="breadcrumb-link">Section</a>
-                        <ul class="second-level-nav">
-                            <li>
-                                <a href="#" class="active">Second level</a>
-                                <ul class="third-level-nav">
-                                    <li>
-                                        <a class="active" href="#">third level</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">third level</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">third level</a>
-                                    </li>
-                                </ul>
-                             </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
             <div class="row" id="grid">
                 <h2>Grid</h2>
                 <div class="twelve-col box">.twelve-col</div>
@@ -127,7 +111,7 @@
             <div class="row no-border" id="buttons">
                 <h2>Buttons</h2>
                 <div class="six-col">
-                    <button class="button--primary" href="#">Button</button>
+                    <button class="button--primary">Button</button>
                 </div>
                 <div class="four-col prepend-two last-col">Button</div>
             </div>
@@ -139,7 +123,7 @@
             </div>
             <div class="row no-border">
                 <div class="six-col">
-                    <button class="button--secondary" href="#">Button</button>
+                    <button class="button--secondary">Button</button>
                 </div>
                 <div class="four-col prepend-two last-col">Secondary button</div>
             </div>
@@ -524,7 +508,7 @@
                     <img src="http://design.ubuntu.com/wp-content/uploads/hero-unit-image.jpg" alt="Ubuntu on a laptop" />
                 </div>
             </div>
-                        
+
             <div id="context-footer" class="context-footer cloud-context-footer no-border">
             <hr />
             	<div class="twelve-col vertical-divider">
@@ -533,9 +517,9 @@
                   	<p>Follow these instructions to download and build your cloud using The Canonical Distribution of Ubuntu OpenStack.</p>
               		<p><a href="/download/cloud/install-ubuntu-openstack">Find out how&nbsp;&rsaquo;</a></p>
             	</div><!-- /.feature-two -->
-            
-            	<div class="feature-three four-col picto">            		
-            		<div class="box-digest">    
+
+            	<div class="feature-three four-col picto">
+            		<div class="box-digest">
                   <form class='mktoForm mktoNoJS' action='https://pages.canonical.com/index.php/leadCapture/save' method='post'>
                     <h3>Sign up for email updates</h3>
                     <ul class='mktoFormRow clearfix no-bullets'>
@@ -543,23 +527,23 @@
                         <label class="off-left mktoLabel" for='Email'>Your email</label>
                         <input type="text" placeholder="Your email" class='mktoField mktoTextField' name='Email' id='Email' required>
                       </li>
-                    
+
                       <li class="mktField mktLblRight">
                         <span class="mktInput mktLblRight"><input class="mktFormCheckbox" name="NewsletterOpt-In" id="NewsletterOpt-In" value="yes" type="checkbox" required><label>I would like to receive occasional updates from Canonical by email.</label>&nbsp;<span class="mktFormMsg"></span></span>
                       </li>
-                
+
                       <li>
                         <span style="display:none;"><input type="text" name="_marketo_comments" value=""></span>
                         <span class='mktoButtonWrap'><button type='submit' class='mktoButton'>Subscribe now</button></span>
-                      
+
                         <input type="hidden" id="insightscloudserver" name="insightscloudserver" value="yes">
-                      
+
                         <input value="1959" class="mktoField mktoFieldDescriptor" name="lpId" type="hidden">
                         <input value="30" class="mktoField mktoFieldDescriptor" name="subId" type="hidden">
                         <input type="hidden" name="lpurl" value="https://pages.canonical.com/Insights-Subscription_Insights-Subscription-test.html?cr={creative}&amp;kw={keyword}" />
                         <input value="1212" class="mktoField mktoFieldDescriptor" name="formid" type="hidden">
                         <input type="hidden" name="ret" value="http://ubuntu.com/cloud/newsletter-thank-you" />
-                        <input value="066-EOV-335" class="mktoField mktoFieldDescriptor" name="munchkinId" type="hidden"> 
+                        <input value="066-EOV-335" class="mktoField mktoFieldDescriptor" name="munchkinId" type="hidden">
                         <input type="hidden" name="kw" value=""/>
                         <input type="hidden" name="cr" value=""/>
                         <input type="hidden" name="searchstr" value=""/>
@@ -567,7 +551,7 @@
                         <input type="hidden" name="_mkt_trk" value=""/>
                       </li>
                     </ul>
-                  </form>  
+                  </form>
                 </div>
             	</div><!-- /.feature-three -->
             	<div class="feature-four four-col last-col">
@@ -585,14 +569,14 @@
                   <li>
                     <a href="https://insights.ubuntu.com/event/big-data-from-complexity-to-simplicity-2/">Big Data: From complexity to simplicity&nbsp;›</a>
                   </li>
-                </ul>	
+                </ul>
             	</div>
             </div>
           </div>
-              
+
       </div>
     </div>
-    
+
     <footer class="global clearfix no-global">
       <nav id="main-navigation" role="navigation" class="clearfix">
         <div class="legal clearfix has-cookie">
@@ -608,14 +592,6 @@
       </nav>
     </footer>
 </body>
-
-<style>
-    #grid .box,
-    #nested-grid .box {
-        border: 1px solid #888;
-        padding: 20px;
-    }
-</style>
 
 </html>
 <!-- the end -->

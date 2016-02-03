@@ -7,8 +7,12 @@
 
 /// cloud element styles
 @import 'modules/base';
+@import 'modules/header';
+@import 'modules/wrapper';
 
-@mixin cloud-vanilla-theme {
+@mixin docs-vanilla-theme {
   @include vanilla;
-  @include boilerplate-base;
+  @include docs-base;
+  @include docs-header;
+  @include docs-wrapper;
 }
