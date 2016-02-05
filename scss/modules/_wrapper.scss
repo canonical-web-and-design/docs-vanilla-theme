@@ -13,8 +13,15 @@
     box-sizing: border-box;
     padding-top: 180px;
   }
-
+  // scss-lint:disable QualifyingElement
   footer.wrapper .inner-wrapper {
     padding-top: 0;
+  }
+  // scss-lint:enable QualifyingElement
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    .wrapper .inner-wrapper {
+      padding-top: 70px;
+    }
   }
 }
