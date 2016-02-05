@@ -1,3 +1,4 @@
+// scss-lint:disable NestingDepth
 ////
 /// @author       Anthony Dillon
 /// @link
@@ -16,10 +17,13 @@
     float: left;
     height: 100%;
     overflow-y: auto;
+    border-right: 1px solid darken($brand-color, 10%);
 
     .logo {
-      margin-top: 1em;
-      margin-bottom: 2em;
+      width: 100%;
+      margin: 0 0 15px;
+      padding: 15px 15px 15px;
+      border-bottom: 1px solid darken($brand-color, 10%);
     }
 
     .nav-primary ul {
@@ -29,24 +33,44 @@
         float: none;
         display: block;
         overflow: hidden;
+        border: 0;
+
+        &:hover {
+          .second-level-nav {
+            display: block;
+          }
+
+          a,
+          a:link,
+          a:visited {
+              background-color: darken($brand-color, 10%);
+          }
+        }
 
         a,
         a:link,
         a:visited {
           text-align: left;
+
+
+          &.active {
+            background-color: $brand-color;
+            border-left: 3px solid $hero-background;
+            font-weight: 500;
+          }
         }
       }
 
       .second-level-nav {
-        background: darken($brand-color, 10%);
+        background-color: darken($brand-color, 10%);
         display: none;
         margin-bottom: 1em;
-      }
 
-      &:hover {
-
-        .second-level-nav {
-          display: block;
+        a,
+        a:link,
+        a:visited,
+        a:link:hover {
+          background-image: none;
         }
       }
     }

@@ -11,5 +11,10 @@
     max-width: calc(100% - 240px);
     padding-left: 240px;
     box-sizing: border-box;
+    padding-top: 180px;
+  }
+
+  footer.wrapper .inner-wrapper {
+    padding-top: 0;
   }
 }
