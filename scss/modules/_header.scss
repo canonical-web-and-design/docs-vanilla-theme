@@ -36,6 +36,8 @@
         border: 0;
 
         &:hover {
+          background-color: $white;
+
           .second-level-nav {
             display: block;
           }
