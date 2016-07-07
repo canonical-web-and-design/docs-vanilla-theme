@@ -51,7 +51,9 @@
 
     > ul {
       border-right: 1px solid lighten($mobile-nav, 60%);
-      padding: 20px 0;
+      // scss-lint:disable ImportantRule
+      padding: 40px 0 20px !important;
+      // scss-lint:enable ImportantRule
     }
 
     ul {
@@ -113,6 +115,7 @@
     padding: 10px;
 
     &__text {
+      // scss-lint:disable ImportantRule
       padding: 10px;
       background-color: $white !important;
       background-image: url('#{$asset-server}19750a6d-search-black.svg');
@@ -127,30 +130,35 @@
       font-weight: 300 !important;
       height: 50px;
       transition: none !important;
+      // scss-lint:enable ImportantRule
 
+      // scss-lint:disable VendorPrefix
       &::-webkit-input-placeholder {
-         color: $cool-grey;
-         opacity: 1;
+        color: $cool-grey;
+        opacity: 1;
       }
 
       &:-moz-placeholder { /* Firefox 18- */
-         color: $cool-grey;
-         opacity: 1;
+        color: $cool-grey;
+        opacity: 1;
       }
 
       &::-moz-placeholder {  /* Firefox 19+ */
-         color: $cool-grey;
-         opacity: 1;
+        color: $cool-grey;
+        opacity: 1;
       }
 
       &:-ms-input-placeholder {
-         color: $cool-grey;
-         opacity: 1;
+        color: $cool-grey;
+        opacity: 1;
       }
+      // scss-lint:enable VendorPrefix
     }
 
     &__button {
+      // scss-lint:disable ImportantRule
       padding: 0 !important;
+      // scss-lint:enable ImportantRule
     }
   }
 }
