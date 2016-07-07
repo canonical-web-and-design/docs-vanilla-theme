@@ -8,13 +8,17 @@
 /// cloud element styles
 @import 'modules/base';
 @import 'modules/header';
-@import 'modules/row-hero';
+@import 'modules/note';
+@import 'modules/rows';
 @import 'modules/wrapper';
+@import 'modules/toc';
 
 @mixin docs-vanilla-theme {
   @include vanilla;
   @include docs-base;
   @include docs-header;
-  @include docs-row-hero;
+  @include docs-notes;
+  @include docs-rows;
   @include docs-wrapper;
+  @include docs-toc;
 }

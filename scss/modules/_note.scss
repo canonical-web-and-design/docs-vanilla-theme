@@ -1,0 +1,94 @@
+////
+/// @author       Anthony Dillon
+/// @link
+/// @since        0.1.0
+////
+
+/// Notes classes
+/// @group Notes
+@mixin docs-notes {
+  @include docs-default-note;
+  @include docs-warning-note;
+  @include docs-error-note;
+  @include docs-success-note;
+  @include docs-information-note;
+}
+
+/// Default note styling
+/// @group Notes
+/// @example
+/// <div class="note">
+///   ...
+/// </div>
+@mixin docs-default-note {
+  .note {
+    @extend %note-pattern;
+    color: $text-color;
+    font-size: 1em;
+    background-color: $light-grey;
+    border: 1px solid $mid-grey;
+  }
+}
+
+/// Warning note styling
+/// @group Notes
+/// @example
+/// <div class="note--warning">
+///   ...
+/// </div>
+@mixin docs-warning-note {
+  .note--warning {
+    @extend %note-pattern;
+    background-color: lighten($warning, 40%);
+    border: 1px solid $warning;
+  }
+}
+
+/// Error note styling
+/// @group Notes
+/// @example
+/// <div class="note--error">
+///   ...
+/// </div>
+@mixin docs-error-note {
+  .note--error {
+    @extend %note-pattern;
+    background-color: lighten($error, 40%);
+    border: 1px solid $error;
+  }
+}
+
+/// Success note styling
+/// @group Notes
+/// @example
+/// <div class="note--success">
+///   ...
+/// </div>
+@mixin docs-success-note {
+  .note--success {
+    @extend %note-pattern;
+    background-color: lighten($success, 40%);
+    border: 1px solid $success;
+  }
+}
+
+/// Information note styling
+/// @group Notes
+/// @example
+/// <div class="note--information">
+///   ...
+/// </div>
+@mixin docs-information-note {
+  .note--information {
+    @extend %note-pattern;
+    background-color: lighten($information, 40%);
+    border: 1px solid $information;
+  }
+}
+
+%note-pattern {
+  font-size: 1em;
+  padding: 20px;
+  border-radius: 2px;
+  color: inherit;
+}
