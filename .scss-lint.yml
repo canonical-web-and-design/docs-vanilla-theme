@@ -11,3 +11,5 @@ linters:
     enabled: false
   QualifyingElement:
     allow_element_with_attribute: true
+  SelectorFormat:
+    convention: hyphenated_BEM

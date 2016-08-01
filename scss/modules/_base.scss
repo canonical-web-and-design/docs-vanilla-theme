@@ -10,4 +10,20 @@
   body {
     margin: 0;
   }
+
+  a:link {
+    text-decoration: underline;
+  }
+
+  pre {
+    background-color: $cool-grey;
+    border: 0;
+    color: $mid-grey;
+    padding: 20px;
+
+    code {
+      margin-bottom: 0;
+      color: $mid-grey;
+    }
+  }
 }

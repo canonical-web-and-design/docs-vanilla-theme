@@ -1,0 +1,16 @@
+////
+/// @author       Anthony Dillon
+/// @link
+/// @since        0.1.0
+////
+
+/// Rows classes
+/// @group Rows
+@mixin docs-rows {
+  @media only screen and (min-width: 1030px) {
+    .row {
+      padding: 40px;
+      border-bottom: 0;
+    }
+  }
+}
