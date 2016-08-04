@@ -163,7 +163,7 @@
             outline: none;
           }
 
-          // scss-lint:disable VendorPrefixes
+          // scss-lint:disable VendorPrefixes VendorPrefix
           &::-webkit-input-placeholder {
             color: $cool-grey;
             font-size: 1em;
@@ -188,7 +188,7 @@
             opacity: 1;
           }
         }
-        // scss-lint:enable VendorPrefixes
+        // scss-lint:enable VendorPrefixes VendorPrefix
 
         button[type="submit"] {
           margin-left: 0;
