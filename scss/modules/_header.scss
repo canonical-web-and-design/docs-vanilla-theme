@@ -144,7 +144,7 @@
       transition: none !important;
       // scss-lint:enable ImportantRule
 
-      // scss-lint:disable VendorPrefixes
+      // scss-lint:disable VendorPrefixes VendorPrefix
       &::-webkit-input-placeholder {
         color: $cool-grey;
         opacity: 1;
@@ -164,7 +164,7 @@
         color: $cool-grey;
         opacity: 1;
       }
-      // scss-lint:enable VendorPrefixes
+      // scss-lint:enable VendorPrefixes VendorPrefix
     }
 
     &__button {
