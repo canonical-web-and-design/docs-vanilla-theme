@@ -1,0 +1,146 @@
+@mixin docs-nav {
+  
+  // scss-lint:disable NestingDepth
+  .documentation {
+    background-color: $white;
+    padding: 0;
+    display: flex;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+    }
+
+    &__nav {
+      $gutter: 20px;
+      $button-width: 10px;
+
+      // To enabling hiding of the bottom-most border in the navigation
+      overflow: hidden;
+
+      @media only screen and (min-width: $breakpoint-medium) {
+        border-right: 1px solid $mid-grey;
+        width: $navigation-width;
+        min-width: $navigation-width;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+        user-select: none;
+
+        li {
+          padding-left: $gutter;
+          padding-right: $gutter;
+          padding-top: 7px;
+
+          margin: 0;
+          position: relative;
+
+          a {
+            display: block;
+            color: $cool-grey;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+              text-decoration: none;
+            }
+
+            &:hover,
+            &.active {
+              color: $navigation-highlight;
+            }
+          }
+
+          &:after {
+            width: $button-width;
+            height: 1.875em;
+            display: block;
+            position: absolute;
+            top: $gutter / 2;
+            right: $gutter;
+            cursor: pointer;
+          }
+
+          &.collapsed {
+            padding-right: $gutter + $button-width;
+
+            > ul {
+              display: none;
+            }
+
+            &:after {
+              content: '+';
+            }
+          }
+
+          &.expanded {
+
+            > ul {
+              display: block;
+            }
+
+            &:after {
+              content: '-';
+            }
+          }
+        }
+      }
+
+      > ul {
+        // Hide the bottom-most border
+        // only if it's pushing right up against the footer
+        // so we don't get an ugly double-border effect
+        @media only screen and (min-width: $breakpoint-medium) {
+          margin-bottom: -1px;
+        }
+
+        > li {
+          border-bottom: 1px dotted $mid-grey;
+          padding-top: $gutter / 2;
+          padding-bottom: $gutter / 2;
+
+          > a {
+            font-size: 1.25em;
+            text-decoration: none;
+          }
+
+          > ul {
+            > li {
+              padding-left: 0;
+              padding-right: 0;
+            }
+          }
+
+          &:after {
+            background-position: center center;
+            background-repeat: no-repeat;
+          }
+
+          &.collapsed:after {
+            content: '';
+            background-image: url('#{$asset-server}04d2075a-chevron_down.svg');
+          }
+
+          &.expanded:after {
+            content: '';
+            background-image: url('#{$asset-server}f3f43376-chevron_up.svg');
+          }
+        }
+      }
+
+      // Top level sections get bottom padding.
+      .section {
+        padding: 0 0 20px;
+        // Subsections & collapsed sections get no padding.
+        &.collapsed,
+        .section {
+          padding: 0;
+        }
+      }
+    }
+  }
+  // scss-lint:enable NestingDepth
+}

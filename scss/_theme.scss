@@ -8,6 +8,7 @@
 /// cloud element styles
 @import 'modules/base';
 @import 'modules/header';
+@import 'modules/navigation';
 @import 'modules/note';
 @import 'modules/rows';
 @import 'modules/wrapper';
@@ -17,6 +18,7 @@
   @include vanilla;
   @include docs-base;
   @include docs-header;
+  @include docs-nav;
   @include docs-notes;
   @include docs-rows;
   @include docs-wrapper;

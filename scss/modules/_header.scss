@@ -49,6 +49,15 @@
   .nav-primary {
     padding: 0 20px;
 
+    .section {
+
+      .header {
+        background: url('#{$asset-server}04d2075a-chevron-down.svg') no-repeat;
+        background-size: 16px 16px;
+        background-position: right center;
+      }
+    }
+
     > ul {
       border-right: 1px solid lighten($mobile-nav, 60%);
       // scss-lint:disable ImportantRule
@@ -62,6 +71,7 @@
       position: relative;
       height: 100%;
       overflow-y: auto;
+      float: left;
 
       li {
         float: none;
@@ -87,6 +97,8 @@
         a:link,
         a:visited {
           text-align: left;
+          width: 100%;
+          float: left;
 
           &.active {
             background-color: $brand-color;
@@ -132,7 +144,7 @@
       transition: none !important;
       // scss-lint:enable ImportantRule
 
-      // scss-lint:disable VendorPrefix
+      // scss-lint:disable VendorPrefixes VendorPrefix
       &::-webkit-input-placeholder {
         color: $cool-grey;
         opacity: 1;
@@ -152,7 +164,7 @@
         color: $cool-grey;
         opacity: 1;
       }
-      // scss-lint:enable VendorPrefix
+      // scss-lint:enable VendorPrefixes VendorPrefix
     }
 
     &__button {

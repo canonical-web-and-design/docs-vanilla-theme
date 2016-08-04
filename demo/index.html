@@ -55,143 +55,102 @@
 
 
     <div class="wrapper">
-        <nav role="navigation" class="nav-primary">
-          <ul>
-            <li class="section"><h4 class="header toggle-target">User Guide</h4>
-              <ul>
-                <li class="is-active"><a href="about-juju">About Juju</a></li>
-                <li class="section"><a class="header" href="getting-started">Install &amp; Configure</a>
-                  <ul class="sub">
-                    <li><a href="config-aws">Amazon Web Service</a></li>
-                    <li><a href="config-azure">Windows Azure</a></li>
-                    <li><a href="config-digitalocean">DigitalOcean</a></li>
-                    <li><a href="config-gce">Google Compute Engine</a></li>
-                    <li><a href="config-hpcloud">HP Public Cloud</a></li>
-                    <li><a href="config-joyent">Joyent</a></li>
-                    <li><a href="config-local">Local</a></li>
-                    <li><a href="config-maas">MAAS (bare metal)</a></li>
-                    <li><a href="config-openstack">OpenStack</a></li>
-                    <li><a href="config-scaleway">Scaleway</a></li>
-                    <li><a href="config-vagrant">Vagrant</a></li>
-                    <li><a href="config-vmware">VMWare vSphere</a></li>
-                    <li><a href="config-manual">Manual Provisioning</a></li>
-                    <li><a href="config-general">General config options</a></li>
-                    <li><a href="getting-started#testing-your-setup">Testing your setup</a></li>
+        <nav class="documentation__nav">
+            <ul>
+                <li class="expanded">
+                  <a href="/docs/snaps" id="Snaps">Snaps</a>
+
+                  <ul>
+                      <li><a href="/docs/snaps/intro" class="active" id="What-is-a-snap?">What is a snap?</a></li>
+                      <li><a href="/docs/snaps/structure" id="Snaps-directory-structure">Snaps directory structure</a></li>
+                      <li><a href="/docs/snaps/metadata" id="Metadata-YAML-file">Metadata YAML file</a></li>
                   </ul>
                 </li>
-                <li class="section"><a class="header" href="charms">Using Juju Charms</a>
-                  <ul class="sub">
-                    <li><a href="charms-deploying">Deploying Services</a></li>
-                    <li><a href="charms-constraints">Using constraints</a></li>
-                    <li><a href="charms-config">Service configuration</a></li>
-                    <li><a href="charms-relations">Service Relations</a></li>
-                    <li><a href="charms-exposing">Exposing Services</a></li>
-                    <li><a href="charms-scaling">Scaling Services</a></li>
-                    <li><a href="charms-destroy">Removing Services &amp; Units</a></li>
-                    <li><a href="charms-service-groups">Groups of Services</a></li>
-                    <li><a href="charms-ha">Charm high availability</a></li>
-                    <li><a href="charms-bundles">Using bundles</a></li>
-                    <li><a href="charms-working-with-units">Working with Units</a></li>
-                    <li><a href="actions">Working with Actions</a></li>
-                    <li><a href="storage">Using storage</a></li>
+                <li class="collapsed">
+                  <a href="/docs/core" id="Core">Core</a>
+                  <ul>
+                      <li><a href="/docs/core/install" id="Install">Install</a></li>
+                      <li><a href="/docs/core/usage" id="Usage">Usage</a></li>
+                      <li><a href="/docs/core/store" id="Snap-stores">Snap stores</a></li>
+                      <li><a href="/docs/core/snapd" id="The-snapd-system">The snapd system</a></li>
+            <!--          <li><a href="/docs/core/core-classic">Core &amp; Classic</a></li>-->
+            <!--          <li><a href="/docs/core/snaps">The kinds of snaps</a></li>-->
+                      <li><a href="/docs/core/interfaces" id="Interfaces-(plugs-and-slots)">Interfaces (plugs and slots)</a></li>
+                      <li><a href="/docs/core/updates" id="Transactional-updates">Transactional updates</a></li>
+                      <li><a href="/docs/core/versions" id="Mutiple-snaps-versions-&amp;-garbage-collection">Mutiple snaps versions &amp; garbage collection</a></li>
                   </ul>
                 </li>
-                <li class="section"><a class="header" href="juju-managing">Managing Juju</a>
-                  <ul class="sub">
-                    <li><a href="juju-ha">Juju high availability</a></li>
-                    <li><a href="juju-multiuser-environments">Multi-user environments</a></li>
-                    <li><a href="juju-systemd">Juju and systemd</a></li>
-                    <li><a href="charms-environments">Managing environments</a></li>
-                    <li><a href="juju-block">Restrict/block Juju commands</a></li>
-                    <li><a href="juju-backups">Backup and restore</a></li>
-                    <li><a href="juju-upgrade">Upgrading Juju</a></li>
-                    <li><a href="juju-gui-management">Using the Juju GUI</a></li>
-                    <li><a href="juju-offline-charms">Deploy charms offline</a></li>
-                    <li><a href="juju-misc">Miscellaneous</a></li>
+                <li class="collapsed">
+                  <a href="/docs/build-snaps" id="Build-snaps">Build snaps</a>
+                  <ul>
+                      <li><a href="/docs/build-snaps/your-first-snap" id="Your-first-snap">Your first snap</a></li>
+                      <li><a href="/docs/build-snaps/syntax" id="Snapcraft-syntax">Snapcraft syntax</a></li>
+                      <li><a href="/docs/build-snaps/parts" id="Parts">Parts</a></li>
+                      <li><a href="/docs/build-snaps/plugins" id="Plugins">Plugins</a></li>
+                      <li><a href="/docs/build-snaps/metadata" id="Commands,-daemons
+            and-assets">Commands, daemons<br>and assets</a></li>
+                      <li><a href="/docs/build-snaps/debugging" id="Debugging">Debugging</a></li>
+                      <li><a href="/docs/build-snaps/publish" id="Publish-your-snap">Publish your snap</a></li>
+                      <li><a href="/docs/build-snaps/advanced-features" id="Advanced-features">Advanced features</a></li>
                   </ul>
                 </li>
-                <li class="section"><a class="header" href="howto">How to...</a>
-                  <ul class="sub">
-                    <li><a href="howto-node">Deploy a Node.js app</a></li>
-                    <li><a href="howto-rails">Test and deploy on Rails</a></li>
-                    <li><a href="howto-privatecloud">Set up a Private Cloud</a></li>
-                    <li><a href="howto-vagrant-workflow">Vagrant Workflow</a></li>
-                    <li><a href="howto-drupal-iis">Deploy Drupal Windows charm</a></li>
+                <li class="collapsed">
+                  <a href="/docs/reference" id="Reference">Reference</a>
+                  <ul>
+                      <li><a href="/docs/reference/snapcraft" id="Snapcraft">Snapcraft</a></li>
+                      <li><a href="/docs/reference/plugins" id="Plugins">Plugins</a></li>
+                      <li><a href="/docs/reference/interfaces" id="Interfaces">Interfaces</a></li>
                   </ul>
                 </li>
-                <li><a href="troubleshooting">Troubleshooting</a></li>
-              </ul>
-            </li>
-            <li class="section"><h4 class="header toggle-target">Charm Authors</h4>
-              <ul>
-                <li><a href="authors-intro">Getting started</a></li>
-                <li class="section"><a class="header" href="authors-charm-components">Components of a charm</a>
-                  <ul class="sub">
-                    <li><a href="authors-charm-metadata">metadata.yaml</a></li>
-                    <li><a href="authors-charm-hooks">/hooks</a></li>
-                    <li><a href="authors-charm-actions">/actions and actions.yaml</a></li>
-                    <li><a href="authors-charm-benchmarks">Benchmarks (optional)</a></li>
-                    <li><a href="authors-charm-config">config.yaml</a></li>
-                  </ul>
-                </li>
-                <li class="section"><a class="header" href="authors-charm-writing">Charm walkthrough</a>
-                  <ul class="sub">
-                    <li><a href="authors-hook-environment">How hooks are run (Hook API)</a></li>
-                    <li><a href="authors-relations-in-depth">Relations lifecycle</a></li>
-                    <li><a href="authors-relations">Implementing relations</a></li>
-                    <li><a href="authors-charm-leadership">Charm leadership</a></li>
-                    <li><a href="authors-hook-errors">Hook Errors</a></li>
-                    <li><a href="authors-hook-debug">Hook Debugging</a></li>
-                    <li><a href="authors-hook-debug-dhx">Hook Debugging with DHX</a></li>
-                    <li><a href="authors-subordinate-services">Subordinate services</a></li>
-                    <li><a href="authors-implicit-relations">Implicit Relations</a></li>
-                    <li><a href="authors-testing">Charm Testing</a></li>
-                    <li><a href="authors-charm-building">Building a Charm from Layers</a></li>
-                    <li><a href="authors-charm-with-docker">Charming with Docker</a></li>
-                  </ul>
-                </li>
-                <li class="section"><a class="header" href="authors-charm-store">The Juju Charm Store</a>
-                  <ul class="sub">
-                    <li><a href="authors-charm-store#submitting">Submit a charm</a></li>
-                    <li><a href="authors-charm-policy">Charm store policy</a></li>
-                    <li><a href="charm-review-process">Charm review process</a></li>
-                    <li><a href="authors-charm-best-practice">Best practices</a></li>
-                    <li><a href="authors-charm-icon">Charm Icons</a></li>
-                  </ul>
-                </li>
-              </ul>
-            <li>
-            <li class="section"><h4 class="header toggle-target">Experimental</h4>
-              <ul>
-                <li><a href="wip-spaces">Network spaces</a></li>
-                <li><a href="wip-centos">CentOS support</a></li>
-              </ul>
-            </li>
-            <li class="section"><h4 class="header toggle-target">Tools</h4>
-              <ul>
-                <li><a href="tools-charm-tools">Charm Tools</a></li>
-                <li><a href="tools-charm-helpers">Charm Helpers</a></li>
-                <li><a href="tools-amulet">Amulet</a></li>
-              </ul>
-            </li>
-            <li class="section"><h4 class="header toggle-target">Reference</h4>
-              <ul>
-                <li><a href="commands">Juju commands</a></li>
-                <li><a href="reference-constraints">Juju constraints</a></li>
-                <li><a href="reference-environment-variables">Juju environment variables</a></li>
-                <li><a href="reference-hook-tools">Juju 'Hook Tools'</a></li>
-                <li><a href="http://godoc.org/github.com/juju/juju/api">Juju API docs</a></li>
-                <li><a href="reference-releases">Releases</a></li>
-                <li><a href="reference-release-notes">Release notes</a></li>
-                <li><a href="reference-status">Status values</a></li>
-                <li><a href="reference-numbering">Machine/unit numbering</a></li>
-                <li><a href="glossary">Glossary</a></li>
-                <li><a href="reference-reviewers">Charm Review Criteria</a></li>
-                <li><a href="contributing">Contribute to the Docs!</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+            </ul>
+
+
+                    <script>
+                        function expandCollapse(clickEvent) {
+                            var item = clickEvent.target;
+                            var link = item.querySelector('[href]');
+                            var linkWidth = link.offsetWidth;
+                            var clickOffset = clickEvent.offsetX;
+
+                            if (clickOffset > linkWidth) {
+                                collapsed = ! item.classList.toggle('expanded');
+                                item.classList.toggle('collapsed', collapsed);
+                            }
+                        }
+
+                        var items = document.querySelectorAll('.documentation__nav ul li');
+
+                        for(var num = 0; num < items.length; num++) {
+                            var item = items[num];
+                            var link = item.querySelector('[href]');
+
+                            if (! link) {continue;}
+
+                            // Get paths, removing leading and trailing slashes for consistency
+                            linkPath = link.pathname.replace(/(^\/|\/$)/g, "");
+                            currentPath = location.pathname.replace(/(^\/|\/$)/g, "");
+
+                            // Make current navigation item appear active
+                            // @TODO: Replace this with a static JS-less solution
+                            //        once we have a more intelligent
+                            //        docs navigation mechanism.
+                            if (linkPath == currentPath) {
+                                link.classList.add('active');
+                            }
+
+                            // For lists with child lists, add expand/collapse functionality
+                            if (item.querySelector('ul')) {
+                                if (currentPath.startsWith(linkPath)) {
+                                    item.classList.add('expanded');
+                                } else {
+                                    item.classList.add('collapsed');
+                                }
+
+                                item.addEventListener('click', expandCollapse);
+                            }
+                        }
+                    </script>
+                </nav>
         <main id="main-content" class="inner-wrapper">
             <div class="row">
       <h1 id="introduction">Introduction<a class="anchor" href="#introduction"></a></h1>
