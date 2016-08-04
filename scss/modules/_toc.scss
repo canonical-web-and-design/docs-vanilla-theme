@@ -9,7 +9,6 @@
 @mixin docs-toc {
   .toc {
     position: sticky;
-    flex: auto;
     width: $navigation-width;
     border-left: 1px solid lighten($mobile-nav, 60%);
     padding-left: 40px;
