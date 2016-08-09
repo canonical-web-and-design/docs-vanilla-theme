@@ -1,0 +1,289 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Docs-vanilla-theme - v0.0.1</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Docs-vanilla-theme - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>The Vanilla theme for documentation, style guides and APIs</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Docs-vanilla-theme - 0.0.1</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="layout"><a href="#layout">layout</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="layout-mixin"><a href="#layout-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="layout" data-name="docs-wrapper" data-type="mixin"><a href="#layout-mixin-docs-wrapper">docs-wrapper</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="navigation"><a href="#navigation">navigation</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="navigation-mixin"><a href="#navigation-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="navigation" data-name="docs-toc" data-type="mixin"><a href="#navigation-mixin-docs-toc">docs-toc</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="notes"><a href="#notes">notes</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="notes-mixin"><a href="#notes-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="notes" data-name="docs-notes" data-type="mixin"><a href="#notes-mixin-docs-notes">docs-notes</a></li><li class="sidebar__item sassdoc__item" data-group="notes" data-name="docs-default-note" data-type="mixin"><a href="#notes-mixin-docs-default-note">docs-default-note</a></li><li class="sidebar__item sassdoc__item" data-group="notes" data-name="docs-warning-note" data-type="mixin"><a href="#notes-mixin-docs-warning-note">docs-warning-note</a></li><li class="sidebar__item sassdoc__item" data-group="notes" data-name="docs-error-note" data-type="mixin"><a href="#notes-mixin-docs-error-note">docs-error-note</a></li><li class="sidebar__item sassdoc__item" data-group="notes" data-name="docs-success-note" data-type="mixin"><a href="#notes-mixin-docs-success-note">docs-success-note</a></li><li class="sidebar__item sassdoc__item" data-group="notes" data-name="docs-information-note" data-type="mixin"><a href="#notes-mixin-docs-information-note">docs-information-note</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="rows"><a href="#rows">rows</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="rows-mixin"><a href="#rows-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="rows" data-name="docs-rows" data-type="mixin"><a href="#rows-mixin-docs-rows">docs-rows</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="brand-color" data-type="variable"><a href="#undefined-variable-brand-color">brand-color</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="utils"><a href="#utils">utils</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="utils-mixin"><a href="#utils-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="utils" data-name="docs-base" data-type="mixin"><a href="#utils-mixin-docs-base">docs-base</a></li><li class="sidebar__item sassdoc__item" data-group="utils" data-name="docs-header" data-type="mixin"><a href="#utils-mixin-docs-header">docs-header</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="layout"><div class="container">layout</div></h1><section class="main__sub-section" id="layout-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="layout-mixin-docs-wrapper"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-wrapper">docs-wrapper</a></h3><span class="item__since">Since 0.0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-wrapper() { 
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .inner-wrapper {
+      flex: auto;
+    }
+
+    .nav-primary {
+      flex: auto;
+      width: $navigation-width;
+    }
+  }
+  // scss-lint:disable QualifyingElement
+  footer.wrapper .inner-wrapper {
+    padding-top: 0;
+  }
+  // scss-lint:enable QualifyingElement
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    .wrapper .inner-wrapper {
+      padding-top: 70px;
+    }
+  }
+ }" data-collapsed="@mixin docs-wrapper() { ... }"><code>@mixin docs-wrapper() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Page layout styles</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="navigation"><div class="container">navigation</div></h1><section class="main__sub-section" id="navigation-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="navigation-mixin-docs-toc"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-toc">docs-toc</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-toc() { 
+  .toc {
+    position: sticky;
+    width: $navigation-width;
+    border-left: 1px solid lighten($mobile-nav, 60%);
+    padding-left: 40px;
+    margin-top: 100px;
+
+    &amp;__heading {
+      text-transform: uppercase;
+      font-size: .875em;
+      font-weight: 300;
+      margin-bottom: 1em;
+    }
+
+    &amp;__list,
+    ol {
+      margin-left: 0;
+    }
+  }
+ }" data-collapsed="@mixin docs-toc() { ... }"><code>@mixin docs-toc() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Table of contents styling</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="notes"><div class="container">notes</div></h1><section class="main__sub-section" id="notes-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="notes-mixin-docs-notes"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-notes">docs-notes</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-notes() { 
+  @include docs-default-note;
+  @include docs-warning-note;
+  @include docs-error-note;
+  @include docs-success-note;
+  @include docs-information-note;
+ }" data-collapsed="@mixin docs-notes() { ... }"><code>@mixin docs-notes() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Notes classes</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-default-note"><code>docs-default-note</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-warning-note"><code>docs-warning-note</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-error-note"><code>docs-error-note</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-success-note"><code>docs-success-note</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-information-note"><code>docs-information-note</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section><section class="main__item container item" id="notes-mixin-docs-default-note"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-default-note">docs-default-note</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-default-note() { 
+  .note {
+    @extend %note-pattern;
+    color: $text-color;
+    font-size: 1em;
+    background-color: $light-grey;
+    border: 1px solid $mid-grey;
+  }
+ }" data-collapsed="@mixin docs-default-note() { ... }"><code>@mixin docs-default-note() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Default note styling</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>&lt;div class=&quot;note&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-notes"><code>docs-notes</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section><section class="main__item container item" id="notes-mixin-docs-warning-note"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-warning-note">docs-warning-note</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-warning-note() { 
+  .note--warning {
+    @extend %note-pattern;
+    background-color: lighten($warning, 40%);
+    border: 1px solid $warning;
+  }
+ }" data-collapsed="@mixin docs-warning-note() { ... }"><code>@mixin docs-warning-note() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Warning note styling</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>&lt;div class=&quot;note--warning&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-notes"><code>docs-notes</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section><section class="main__item container item" id="notes-mixin-docs-error-note"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-error-note">docs-error-note</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-error-note() { 
+  .note--error {
+    @extend %note-pattern;
+    background-color: lighten($error, 40%);
+    border: 1px solid $error;
+  }
+ }" data-collapsed="@mixin docs-error-note() { ... }"><code>@mixin docs-error-note() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Error note styling</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>&lt;div class=&quot;note--error&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-notes"><code>docs-notes</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section><section class="main__item container item" id="notes-mixin-docs-success-note"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-success-note">docs-success-note</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-success-note() { 
+  .note--success {
+    @extend %note-pattern;
+    background-color: lighten($success, 40%);
+    border: 1px solid $success;
+  }
+ }" data-collapsed="@mixin docs-success-note() { ... }"><code>@mixin docs-success-note() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Success note styling</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>&lt;div class=&quot;note--success&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-notes"><code>docs-notes</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section><section class="main__item container item" id="notes-mixin-docs-information-note"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-information-note">docs-information-note</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-information-note() { 
+  .note--information {
+    @extend %note-pattern;
+    background-color: lighten($information, 40%);
+    border: 1px solid $information;
+  }
+ }" data-collapsed="@mixin docs-information-note() { ... }"><code>@mixin docs-information-note() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Information note styling</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>&lt;div class=&quot;note--information&quot;&gt;
+  ...
+&lt;/div&gt;</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#notes-mixin-docs-notes"><code>docs-notes</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="rows"><div class="container">rows</div></h1><section class="main__sub-section" id="rows-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="rows-mixin-docs-rows"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-rows">docs-rows</a></h3><span class="item__since">Since 0.1.0</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-rows() { 
+  @media only screen and (min-width: 1030px) {
+    .row {
+      padding: 40px;
+      border-bottom: 0;
+    }
+  }
+ }" data-collapsed="@mixin docs-rows() { ... }"><code>@mixin docs-rows() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Rows classes</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-brand-color"><h3 class="item__heading"><a class="item__name" href="#variable-brand-color">brand-color</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$brand-color: #fff;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>the theme&#39;s core brand colour</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#utils-mixin-docs-header"><code>docs-header</code></a></li></ul></section></section></section><section class="main__section"><h1 class="main__heading" id="utils"><div class="container">utils</div></h1><section class="main__sub-section" id="utils-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="utils-mixin-docs-base"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-base">docs-base</a></h3><span class="item__since">Since 0.0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-base() { 
+  body {
+    margin: 0;
+  }
+
+  a:link {
+    text-decoration: underline;
+  }
+
+  pre {
+    background-color: $cool-grey;
+    border: 0;
+    color: $mid-grey;
+    padding: 20px;
+
+    code {
+      margin-bottom: 0;
+      color: $mid-grey;
+    }
+  }
+ }" data-collapsed="@mixin docs-base() { ... }"><code>@mixin docs-base() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base classes</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section><section class="main__item container item" id="utils-mixin-docs-header"><h3 class="item__heading"><a class="item__name" href="#mixin-docs-header">docs-header</a></h3><span class="item__since">Since 0.0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin docs-header() { 
+  .nav {
+    &amp;--version {
+      display: inline-block;
+      padding-top: 25px;
+      margin-bottom: 10px;
+      margin-left: 0;
+
+      .nav__link {
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+      }
+
+      .nav__item,
+      .nav__item--label {
+        font-size: .875em;
+        text-transform: uppercase;
+        float: left;
+        padding: 0 5px;
+
+        &amp;.is-active .nav__link {
+          border-color: $navigation-highlight;
+        }
+      }
+    }
+  }
+
+  .banner .logo {
+    padding: 15px 10px 5px;
+
+    a {
+      background: none;
+    }
+  }
+
+  header nav a:link {
+    font-weight: 300;
+  }
+
+  .nav-primary {
+    padding: 0 20px;
+
+    .section {
+
+      .header {
+        background: url(&#39;#{$asset-server}04d2075a-chevron-down.svg&#39;) no-repeat;
+        background-size: 16px 16px;
+        background-position: right center;
+      }
+    }
+
+    &gt; ul {
+      border-right: 1px solid lighten($mobile-nav, 60%);
+      // scss-lint:disable ImportantRule
+      padding: 40px 0 20px !important;
+      // scss-lint:enable ImportantRule
+    }
+
+    ul {
+      padding: 10px 0;
+      margin: 0;
+      position: relative;
+      height: 100%;
+      overflow-y: auto;
+      float: left;
+
+      li {
+        float: none;
+        display: block;
+        overflow: hidden;
+        border: 0;
+        border-left: 2px solid transparent;
+        padding-left: 10px;
+
+        &amp;.is-active {
+          border-color: $navigation-highlight;
+        }
+
+        &amp;:hover {
+          background-color: $white;
+
+          .second-level-nav {
+            display: block;
+          }
+        }
+
+        a,
+        a:link,
+        a:visited {
+          text-align: left;
+          width: 100%;
+          float: left;
+
+          &amp;.active {
+            background-color: $brand-color;
+            border-left: 3px solid $navigation-highlight;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .second-level-nav {
+        background-color: darken($brand-color, 10%);
+        display: none;
+        margin-bottom: 1em;
+
+        a,
+        a:link,
+        a:visited,
+        a:link:hover {
+          background-image: none;
+        }
+      }
+    }
+  }
+
+  .search-form {
+    padding: 10px;
+
+    &amp;__text {
+      // scss-lint:disable ImportantRule
+      padding: 10px;
+      background-color: $white !important;
+      background-image: url(&#39;#{$asset-server}19750a6d-search-black.svg&#39;);
+      background-position: 10px center;
+      background-repeat: no-repeat;
+      background-size: 1.5em;
+      padding-left: 40px !important;
+      color: $cool-grey;
+      border: 1px solid $mid-grey !important;
+      border-radius: 2px !important;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .07) inset !important;
+      font-weight: 300 !important;
+      height: 50px;
+      transition: none !important;
+      // scss-lint:enable ImportantRule
+
+      // scss-lint:disable VendorPrefixes VendorPrefix
+      &amp;::-webkit-input-placeholder {
+        color: $cool-grey;
+        opacity: 1;
+      }
+
+      &amp;:-moz-placeholder { /* Firefox 18- */
+        color: $cool-grey;
+        opacity: 1;
+      }
+
+      &amp;::-moz-placeholder {  /* Firefox 19+ */
+        color: $cool-grey;
+        opacity: 1;
+      }
+
+      &amp;:-ms-input-placeholder {
+        color: $cool-grey;
+        opacity: 1;
+      }
+      // scss-lint:enable VendorPrefixes VendorPrefix
+    }
+
+    &amp;__button {
+      // scss-lint:disable ImportantRule
+      padding: 0 !important;
+      // scss-lint:enable ImportantRule
+    }
+  }
+ }" data-collapsed="@mixin docs-header() { ... }"><code>@mixin docs-header() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Header styling for docs theme. Float left</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-brand-color"><code>brand-color</code></a></li></ul><h3 class="item__sub-heading">Links</h3><ul class="list-unstyled"><li><a href=""></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>Anthony Dillon</p></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><span class="project-info__name">Docs-vanilla-theme</span><!-- Version --> <span class="project-info__version">- v0.0.1</span><!-- License --> <span class="project-info__license">, under LGPL-3.0</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
