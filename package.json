@@ -1,6 +1,6 @@
 {
   "name": "docs-vanilla-theme",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "The Vanilla theme for documentation, style guides and APIs",
   "author": {
     "name": "Anthony Dillon",
@@ -11,6 +11,10 @@
     {
       "name": "Anthony Dillon",
       "email": "anthony.dillon@canonical.com"
+    },
+    {
+      "name": "Richard McCartney",
+      "email": "richard.mccartney@canonical.com"
     }
   ],
   "keywords": [
@@ -30,7 +34,7 @@
   },
   "repository": {
   "type" : "git",
-  "url" : "https://github.com/ubuntudesign/boilerplate-vanilla-theme"
+  "url" : "https://github.com/ubuntudesign/docs-vanilla-theme"
   },
   "devDependencies": {
     "gulp": "3.9",
