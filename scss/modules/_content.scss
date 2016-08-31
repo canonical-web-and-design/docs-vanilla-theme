@@ -1,0 +1,43 @@
+////
+/// @author       Web Team at Canonical Ltd
+/// @since        0.1.1
+////
+
+/// Content styles
+@mixin docs-content {
+  .documentation__contents,
+  .documentation__contents.inner-wrapper {
+    margin-left: 0;
+    display: flex;
+    order: 1;
+    max-width: 100%;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      padding-top: 0;
+    }
+
+    .row {
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    code {
+      color: inherit;
+    }
+
+    pre {
+      position: relative;
+      border-radius: 4px;
+      background-color: $color-light-grey;
+      overflow: hidden;
+      font-size: 1em;
+      font-weight: 300;
+      padding: .7em 1em;
+      color: $color-cool-grey;
+      width: 100%;
+    }
+  }
+}

@@ -11,7 +11,6 @@
   @include docs-warning-note;
   @include docs-error-note;
   @include docs-success-note;
-  @include docs-information-note;
 }
 
 /// Default note styling
@@ -23,10 +22,10 @@
 @mixin docs-default-note {
   .note {
     @extend %note-pattern;
-    color: $text-color;
+    color: $color-cool-grey;
     font-size: 1em;
-    background-color: $light-grey;
-    border: 1px solid $mid-grey;
+    background-color: $color-light-grey;
+    border: 1px solid $color-mid-grey;
   }
 }
 
@@ -39,8 +38,8 @@
 @mixin docs-warning-note {
   .note--warning {
     @extend %note-pattern;
-    background-color: lighten($warning, 40%);
-    border: 1px solid $warning;
+    background-color: lighten($color-warning, 40%);
+    border: 1px solid $color-warning;
   }
 }
 
@@ -53,8 +52,8 @@
 @mixin docs-error-note {
   .note--error {
     @extend %note-pattern;
-    background-color: lighten($error, 40%);
-    border: 1px solid $error;
+    background-color: lighten($color-negative, 40%);
+    border: 1px solid $color-negative;
   }
 }
 
@@ -67,22 +66,8 @@
 @mixin docs-success-note {
   .note--success {
     @extend %note-pattern;
-    background-color: lighten($success, 40%);
-    border: 1px solid $success;
-  }
-}
-
-/// Information note styling
-/// @group Notes
-/// @example
-/// <div class="note--information">
-///   ...
-/// </div>
-@mixin docs-information-note {
-  .note--information {
-    @extend %note-pattern;
-    background-color: lighten($information, 40%);
-    border: 1px solid $information;
+    background-color: lighten($color-positive, 40%);
+    border: 1px solid $color-positive;
   }
 }
 

@@ -7,20 +7,26 @@
 
 /// cloud element styles
 @import 'modules/base';
+@import 'modules/content';
+@import 'modules/footer';
 @import 'modules/header';
 @import 'modules/navigation';
 @import 'modules/note';
 @import 'modules/rows';
 @import 'modules/wrapper';
+@import 'modules/search';
 @import 'modules/toc';
 
 @mixin docs-vanilla-theme {
   @include vanilla;
   @include docs-base;
+  @include docs-content;
+  @include docs-footer;
   @include docs-header;
   @include docs-nav;
   @include docs-notes;
   @include docs-rows;
   @include docs-wrapper;
+  @include docs-search;
   @include docs-toc;
 }

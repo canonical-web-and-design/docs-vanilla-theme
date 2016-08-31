@@ -1,0 +1,22 @@
+
+////
+/// @author       Anthony Dillon
+/// @link
+/// @since        0.1.1
+////
+
+/// Footer styling for docs theme.
+@mixin docs-footer {
+  // scss-lint:disable QualifyingElement
+  footer.global {
+    background: none;
+    border-top: 0;
+    box-shadow: inset 0 2px 2px -1px $color-mid-grey;
+    clear: both;
+    display: block;
+    padding: 30px 10px 20px;
+    position: relative;
+    width: 100%;
+  }
+  // scss-lint:enable QualifyingElement
+}

@@ -1,26 +1,32 @@
 @mixin docs-nav {
-  
+
   // scss-lint:disable NestingDepth
   .documentation {
-    background-color: $white;
+    background-color: $color-light;
     padding: 0;
     display: flex;
+    flex-direction: row;
 
     @media only screen and (max-width: $breakpoint-medium) {
       flex-direction: column;
     }
 
     &__nav {
-      $gutter: 20px;
       $button-width: 10px;
-
+      order: 2;
       // To enabling hiding of the bottom-most border in the navigation
       overflow: hidden;
 
       @media only screen and (min-width: $breakpoint-medium) {
-        border-right: 1px solid $mid-grey;
+        border-right: 1px solid $color-mid-grey;
         width: $navigation-width;
         min-width: $navigation-width;
+        order: 0;
+      }
+
+      h4 {
+        margin-top: .2em;
+        margin-bottom: .2em;
       }
 
       ul {
@@ -31,17 +37,24 @@
         user-select: none;
 
         li {
-          padding-left: $gutter;
-          padding-right: $gutter;
           padding-top: 7px;
-
           margin: 0;
           position: relative;
 
-          a {
+          &:after {
+            width: $button-width;
+            height: 1.875em;
             display: block;
-            color: $cool-grey;
+            position: absolute;
+            top: $grid-gutter-width / 2;
+            right: $grid-gutter-width;
+            cursor: pointer;
+          }
+
+          a {
+            color: $color-cool-grey;
             text-decoration: none;
+            border-bottom: 0;
 
             &:hover,
             &:focus {
@@ -54,18 +67,8 @@
             }
           }
 
-          &:after {
-            width: $button-width;
-            height: 1.875em;
-            display: block;
-            position: absolute;
-            top: $gutter / 2;
-            right: $gutter;
-            cursor: pointer;
-          }
-
           &.collapsed {
-            padding-right: $gutter + $button-width;
+            padding-right: $grid-gutter-width + $button-width;
 
             > ul {
               display: none;
@@ -89,6 +92,11 @@
         }
       }
 
+      .collapsed h4,
+      .expanded h4 {
+        cursor: pointer;
+      }
+
       > ul {
         // Hide the bottom-most border
         // only if it's pushing right up against the footer
@@ -98,12 +106,12 @@
         }
 
         > li {
-          border-bottom: 1px dotted $mid-grey;
-          padding-top: $gutter / 2;
-          padding-bottom: $gutter / 2;
+          border-bottom: 1px dotted $color-mid-grey;
+          padding-top: $grid-gutter-width / 2;
+          padding-bottom: $grid-gutter-width / 2;
 
           > a {
-            font-size: 1.25em;
+            font-size: 1em;
             text-decoration: none;
           }
 
@@ -121,12 +129,12 @@
 
           &.collapsed:after {
             content: '';
-            background-image: url('#{$asset-server}04d2075a-chevron_down.svg');
+            background-image: url('#{$assets-path}04d2075a-chevron_down.svg');
           }
 
           &.expanded:after {
             content: '';
-            background-image: url('#{$asset-server}f3f43376-chevron_up.svg');
+            background-image: url('#{$assets-path}f3f43376-chevron_up.svg');
           }
         }
       }
@@ -139,6 +147,34 @@
         .section {
           padding: 0;
         }
+      }
+    }
+
+    &__versions {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px dotted $color-mid-grey;
+      overflow: hidden;
+
+      li {
+        float: left;
+        border-left: 1px dotted $color-mid-grey;
+
+        &:first-child {
+          border-left: 0;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &__jump {
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      @media only screen and (min-width: $breakpoint-medium) {
+        display: none;
       }
     }
   }
