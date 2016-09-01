@@ -26,127 +26,96 @@
 
       h4 {
         margin-top: .2em;
-        margin-bottom: .2em;
-      }
-
-      ul {
-        list-style: none;
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-        user-select: none;
-
-        li {
-          padding-top: 7px;
-          margin: 0;
-          position: relative;
-
-          &:after {
-            width: $button-width;
-            height: 1.875em;
-            display: block;
-            position: absolute;
-            top: $grid-gutter-width / 2;
-            right: $grid-gutter-width;
-            cursor: pointer;
-          }
-
-          a {
-            color: $color-cool-grey;
-            text-decoration: none;
-            border-bottom: 0;
-
-            &:hover,
-            &:focus {
-              text-decoration: none;
-            }
-
-            &:hover,
-            &.active {
-              color: $navigation-highlight;
-            }
-          }
-
-          &.collapsed {
-            padding-right: $grid-gutter-width + $button-width;
-
-            > ul {
-              display: none;
-            }
-
-            &:after {
-              content: '+';
-            }
-          }
-
-          &.expanded {
-
-            > ul {
-              display: block;
-            }
-
-            &:after {
-              content: '-';
-            }
-          }
-        }
-      }
-
-      .collapsed h4,
-      .expanded h4 {
+        margin-bottom: .6em;
         cursor: pointer;
       }
 
-      > ul {
-        // Hide the bottom-most border
-        // only if it's pushing right up against the footer
-        // so we don't get an ugly double-border effect
-        @media only screen and (min-width: $breakpoint-medium) {
-          margin-bottom: -1px;
-        }
+      .row--nav {
+        padding: 0;
 
-        > li {
-          border-bottom: 1px dotted $color-mid-grey;
-          padding-top: $grid-gutter-width / 2;
-          padding-bottom: $grid-gutter-width / 2;
+        > ul {
+          list-style: none;
+          margin: 0;
+          padding-left: 0;
+          padding-right: 0;
+          user-select: none;
 
-          > a {
-            font-size: 1em;
-            text-decoration: none;
-          }
+          > li {
+            border-bottom: 1px dotted $color-mid-grey;
+            padding: $grid-gutter-width / 2;
+            margin: 0;
+            position: relative;
 
-          > ul {
-            > li {
-              padding-left: 0;
-              padding-right: 0;
+            @media only screen and (min-width: $breakpoint-medium) {
+              padding-left: $grid-gutter-width;
             }
-          }
 
-          &:after {
-            background-position: center center;
-            background-repeat: no-repeat;
-          }
+            &:after {
+              width: $button-width;
+              height: 1.875em;
+              display: block;
+              position: absolute;
+              top: $grid-gutter-width / 2;
+              right: $grid-gutter-width;
+              cursor: pointer;
+              background-position: center center;
+              background-repeat: no-repeat;
+            }
 
-          &.collapsed:after {
-            content: '';
-            background-image: url('#{$assets-path}04d2075a-chevron_down.svg');
-          }
+            a {
+              color: $color-cool-grey;
+              text-decoration: none;
+              border-bottom: 0;
+              font-size: 1em;
+              font-weight: 300;
 
-          &.expanded:after {
-            content: '';
-            background-image: url('#{$assets-path}f3f43376-chevron_up.svg');
+              &:hover,
+              &:focus {
+                text-decoration: none;
+              }
+
+              &:hover,
+              &.active {
+                color: $navigation-highlight;
+              }
+            }
+
+            &.collapsed {
+
+              > ul {
+                display: none;
+              }
+
+              &:after {
+                content: '';
+                background-image: url('#{$assets-path}04d2075a-chevron_down.svg');
+              }
+            }
+
+            &.expanded {
+
+              > ul {
+                display: block;
+                margin-left: 0;
+              }
+
+              &:after {
+                content: '';
+                background-image: url('#{$assets-path}f3f43376-chevron_up.svg');
+              }
+            }
           }
         }
       }
+    }
 
-      // Top level sections get bottom padding.
+    // Top level sections get bottom padding.
+    .section {
+      padding: 0 0 20px;
+      // Subsections & collapsed sections get no padding.
+      &.collapsed,
       .section {
-        padding: 0 0 20px;
-        // Subsections & collapsed sections get no padding.
-        &.collapsed,
-        .section {
-          padding: 0;
-        }
+        padding: 0;
       }
     }
 
@@ -155,8 +124,8 @@
       padding-right: 20px;
       padding-top: 10px;
       padding-bottom: 10px;
-      border-bottom: 1px dotted $color-mid-grey;
       overflow: hidden;
+      border-bottom: 1px dotted $color-mid-grey;
 
       li {
         float: left;
@@ -170,12 +139,54 @@
     }
 
     &__jump {
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding: $grid-gutter-width $grid-gutter-width / 2;
+      float: right;
 
       @media only screen and (min-width: $breakpoint-medium) {
         display: none;
       }
+    }
+  }
+
+  .nav--version {
+    border-bottom: 1px dotted $color-mid-grey;
+    border-top: 1px dotted $color-mid-grey;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+      border-top: 0;
+    }
+
+    ul {
+      display: inline-block;
+      margin: 27px 0 10px;
+      padding: 0 0 0 $grid-gutter-width / 2;
+
+      @media only screen and (min-width: $breakpoint-medium) {
+        padding-left: $grid-gutter-width;
+      }
+    }
+
+    .nav__link {
+      text-decoration: none;
+    }
+
+    .nav__item,
+    .nav__item--label {
+      text-transform: uppercase;
+      float: left;
+      padding: 0 5px;
+
+      @media only screen and (min-width: $breakpoint-medium) {
+        font-size: .875em;
+      }
+
+      &.is-active .nav__link {
+        border-bottom: 0;
+      }
+    }
+
+    .nav__item--label {
+      padding-left: 0;
     }
   }
   // scss-lint:enable NestingDepth

@@ -9,19 +9,19 @@
 @mixin docs-toc {
   .toc {
     order: 0;
-    padding-left: $grid-gutter-width;
+    padding-left: $grid-gutter-width / 2;
 
     @media only screen and (min-width: $breakpoint-medium) {
       order: 2;
       position: sticky;
       width: $navigation-width;
       border-left: 1px solid $color-mid-grey;
-      margin-top: 100px;
+      margin-top: 60px;
+      padding-left: $grid-gutter-width;
     }
 
     &__heading {
       text-transform: uppercase;
-      font-size: .875em;
       font-weight: 300;
       margin-bottom: 1em;
     }
@@ -32,86 +32,4 @@
       margin-left: 0;
     }
   }
-
-  .documentation__nav {
-    order: 2;
-
-    @media only screen and (min-width: $breakpoint-medium) {
-      order: 0;
-    }
-
-    h4 {
-      margin-top: .2em;
-      margin-bottom: .2em;
-    }
-
-    ul li:after {
-      height: 2.25em;
-    }
-
-    .collapsed h4,
-    .expanded h4 {
-      cursor: pointer;
-    }
-
-    > ul > li > a {
-      font-size: 1em;
-    }
-  }
-
-  .documentation__contents,
-  .documentation__contents.inner-wrapper {
-    margin-left: 0;
-    display: flex;
-    order: 1;
-    max-width: 100%;
-
-    @media only screen and (max-width: $breakpoint-medium) {
-      padding-top: 0;
-    }
-
-    .row {
-      width: 100%;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    code {
-      color: inherit;
-    }
-
-    pre {
-      position: relative;
-      border-radius: 4px;
-      background-color: $color-light-grey;
-      overflow: hidden;
-      font-size: 1em;
-      font-weight: 300;
-      padding: .7em 1em;
-      color: $color-cool-grey;
-      width: 100%;
-    }
-  }
-
-  .documentation__versions {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px dotted $color-mid-grey;
-    overflow: hidden;
-
-    li {
-      float: left;
-      border-left: 1px dotted $color-mid-grey;
-
-      &:first-child {
-        border-left: 0;
-        padding-left: 0;
-      }
-    }
-  }
-
 }
