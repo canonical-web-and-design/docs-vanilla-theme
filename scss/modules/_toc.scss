@@ -8,21 +8,27 @@
 /// @group Navigation
 @mixin docs-toc {
   .toc {
-    position: sticky;
-    width: $navigation-width;
-    border-left: 1px solid lighten($mobile-nav, 60%);
-    padding-left: 40px;
-    margin-top: 100px;
+    order: 0;
+    padding-left: $grid-gutter-width / 2;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+      order: 2;
+      position: sticky;
+      width: $navigation-width;
+      border-left: 1px solid $color-mid-grey;
+      margin-top: 60px;
+      padding-left: $grid-gutter-width;
+    }
 
     &__heading {
       text-transform: uppercase;
-      font-size: .875em;
       font-weight: 300;
       margin-bottom: 1em;
     }
 
     &__list,
     ol {
+      padding-left: 0;
       margin-left: 0;
     }
   }

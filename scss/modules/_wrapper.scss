@@ -7,10 +7,14 @@
 /// Page layout styles
 /// @group Layout
 @mixin docs-wrapper {
-  .wrapper {
+  .documentation__wrapper {
+    flex-direction: column;
     display: flex;
-    flex-direction: row;
     width: 100%;
+
+    @media only screen and (min-width : $breakpoint-medium) {
+      flex-direction: row;
+    }
 
     .inner-wrapper {
       flex: auto;
@@ -20,16 +24,14 @@
       flex: auto;
       width: $navigation-width;
     }
+
+    .external {
+      background-image: url('#{$assets-path}769fa468-dark-external-link.svg');
+    }
   }
   // scss-lint:disable QualifyingElement
   footer.wrapper .inner-wrapper {
     padding-top: 0;
   }
   // scss-lint:enable QualifyingElement
-
-  @media only screen and (max-width: $breakpoint-medium) {
-    .wrapper .inner-wrapper {
-      padding-top: 70px;
-    }
-  }
 }
