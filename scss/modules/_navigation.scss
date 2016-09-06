@@ -33,8 +33,11 @@
       .row--nav {
         padding: 0;
 
-        > ul {
+        ul {
           list-style: none;
+        }
+
+        > ul {
           margin: 0;
           padding-left: 0;
           padding-right: 0;
@@ -43,7 +46,7 @@
           > li {
             border-bottom: 1px dotted $color-mid-grey;
             padding: $grid-gutter-width / 2;
-            margin: 0;
+            margin: 0 0 .5rem;
             position: relative;
 
             @media only screen and (min-width: $breakpoint-medium) {
