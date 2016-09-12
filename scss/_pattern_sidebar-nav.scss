@@ -1,0 +1,11 @@
+
+@mixin p-sidebar-nav {
+
+  .p-sidebar-nav {
+
+    &__list {
+      list-style: none;
+      padding-left: 1rem;
+    }
+  }
+}
