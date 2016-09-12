@@ -7,14 +7,19 @@
 // theme layout
 @import 'theme_layout';
 
-// patterns
+// vanilla overrides
 @import 'pattern_navigation';
 @import 'pattern_footer';
+
+// theme specific patterns
 @import 'pattern_note';
+@import 'pattern_sidebar-nav';
 
 @mixin docs-vanilla-theme {
   @include vanilla;
   @include t-layout;
+  @include p-footer;
   @include p-note;
+  @include p-navigation;
   @include p-sidebar-nav;
 }
