@@ -14,6 +14,7 @@
 // theme specific patterns
 @import 'pattern_note';
 @import 'pattern_sidebar-nav';
+@import 'pattern_toc';
 
 @mixin docs-vanilla-theme {
   @include vanilla;
@@ -22,4 +23,5 @@
   @include p-note;
   @include p-navigation;
   @include p-sidebar-nav;
+  @include p-toc;
 }
