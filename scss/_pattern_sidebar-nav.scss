@@ -28,21 +28,20 @@
 
     &__section {
       height: 0;
+      position: relative;
       transform: scaleY(0);
       transform-origin: top;
       transition: transform .5s ease;
-      position: relative;
-      z-index: 999;
 
       &:target {
-        height: auto;
-        transform: scaleY(1);
-        // Prevent browser head-butting
-        // http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D
-        border-top: 100px solid transparent;
-        margin-top: -116px;
         background-clip: padding-box;
+        border-top: 100px solid transparent; // Prevent browser head-butting [1]
+        height: auto;
+        margin-top: -116px;
+        transform: scaleY(1);
       }
     }
   }
 }
+
+// [1] // http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D
