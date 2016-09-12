@@ -1,0 +1,15 @@
+
+@mixin p-navigation {
+
+  .p-navigation {
+    background: $color-light;
+    color: $color-dark;
+    border-bottom: 1px solid $color-cool-grey;
+
+    &__logo {
+      color: $color-dark;
+      font-size: 1.5rem;
+    }
+  }
+
+}
