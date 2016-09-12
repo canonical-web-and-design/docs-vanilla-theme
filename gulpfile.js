@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     notify = require('gulp-notify'),
     gutil = require('gulp-util'),
-    scsslint = require('gulp-scss-lint'),
+    sassLint = require('gulp-sass-lint'),
     minifycss = require('gulp-minify-css'),
     sassdoc = require('sassdoc'),
     util = require('util');
@@ -31,10 +31,10 @@ gulp.task('help', function() {
 });
 
 gulp.task('sasslint', function() {
-    var path = (gutil.env.file)? gutil.env.file : '**/*.scss';
-    return gulp.src('scss/' + path)
-        .pipe(scsslint())
-        .pipe(scsslint.failReporter());
+    return gulp.src('scss/**/*.s+(a|c)ss')
+      .pipe(sassLint())
+      .pipe(sassLint.format())
+      .pipe(sassLint.failOnError())
 });
 
 gulp.task('sass', function() {
