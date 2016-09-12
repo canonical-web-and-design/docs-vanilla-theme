@@ -1,0 +1,9 @@
+
+@mixin p-note {
+
+  .note {
+    background: $color-information;
+    border: 1px solid darken($color-information, 25%);
+    padding: 1rem;
+  }
+}

@@ -1,6 +1,14 @@
 // import Vanilla
 @import '../node_modules/vanilla-framework/scss/vanilla';
 
+// settings
+@import 'settings_colors';
+
+// theme layout
+@import 'theme_layout';
+
 @mixin docs-vanilla-theme {
   @include vanilla;
+  @include t-layout;
+  @include p-note;
 }
