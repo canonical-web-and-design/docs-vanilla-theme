@@ -5,7 +5,11 @@
 
     &__list {
       list-style: none;
-      padding-left: 1rem;
+      padding-left: 0;
+
+      & & { // only target nested .p-sidebar-nav__list
+        padding-left: 1rem;
+      }
     }
   }
 }

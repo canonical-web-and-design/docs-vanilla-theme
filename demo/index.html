@@ -17,14 +17,13 @@
                 vanilla docs theme
             </a>
         </div>
-        <a href="#navigation" class="p-navigation__toggle--open">Menu</a>
-        <a href="#navigation-closed" class="p-navigation__toggle--close">Close</a>
         <nav id="main-navigation" class="p-navigation__nav" role="navigation">
             <span class="u-off-screen">
                 <a href="#main-content">Jump to main content</a>
             </span>
         </nav>
     </header>
+    <div class="l-col-wrap">
     <div class="row">
         <div class="col-3">
             <nav class="p-sidebar-nav">
@@ -130,7 +129,7 @@
                 </section>
             </nav>
         </div>
-            <div class="col-9">
+            <div class="col-9 l-col-main">
                 <div class="col-7">
                     <main id="main-content">
                             <h1>Introduction</h1>
@@ -273,63 +272,63 @@
             services together.</p>
                             <p>In order to make our WordPress public, we now need to expose this service:</p>
                             <pre class="language-bash">
-    <code class="language-bash">juju expose wordpress</code></pre>
+<code class="language-bash">juju expose wordpress</code></pre>
                             <p>This service will now be configured to respond to web requests, so visitors can
             see it. But where exactly is it? If we run the
     <code>juju status</code> command, we will be
             able to see what services are running, and where they are located.
                             </p>
                             <pre class="language-bash">
-    <code class="language-bash">juju status</code></pre>
+<code class="language-bash">juju status</code></pre>
                             <p>The output from this command should look something like this:</p>
-    <pre class="language-no">
-    <code class="-highlight language-no">machines:
-    "0":
+<pre class="language-no">
+<code class="-highlight language-no">machines:
+"0":
+  agent-state: started
+  agent-version: 1.10.0
+  dns-name: ec2-50-16-167-135.compute-1.amazonaws.com
+  instance-id: i-781bf614
+  series: precise
+"1":
+  agent-state: started
+  agent-version: 1.10.0
+  dns-name: ec2-23-22-225-54.compute-1.amazonaws.com
+  instance-id: i-9e8927f6
+  series: precise
+"2":
+  agent-state: started
+  agent-version: 1.10.0
+  dns-name: ec2-54-224-220-210.compute-1.amazonaws.com
+  instance-id: i-5c440436
+  series: precise
+services:
+mysql:
+  charm: cs:precise/mysql-18
+  exposed: false
+  relations:
+    db:
+    - wordpress
+  units:
+    mysql/0:
       agent-state: started
       agent-version: 1.10.0
-      dns-name: ec2-50-16-167-135.compute-1.amazonaws.com
-      instance-id: i-781bf614
-      series: precise
-    "1":
+      machine: "1"
+      public-address: ec2-23-22-225-54.compute-1.amazonaws.com
+wordpress:
+  charm: cs:precise/wordpress-12
+  exposed: true
+  relations:
+    db:
+    - mysql
+    loadbalancer:
+    - wordpress
+  units:
+    wordpress/0:
       agent-state: started
       agent-version: 1.10.0
-      dns-name: ec2-23-22-225-54.compute-1.amazonaws.com
-      instance-id: i-9e8927f6
-      series: precise
-    "2":
-      agent-state: started
-      agent-version: 1.10.0
-      dns-name: ec2-54-224-220-210.compute-1.amazonaws.com
-      instance-id: i-5c440436
-      series: precise
-    services:
-    mysql:
-      charm: cs:precise/mysql-18
-      exposed: false
-      relations:
-        db:
-        - wordpress
-      units:
-        mysql/0:
-          agent-state: started
-          agent-version: 1.10.0
-          machine: "1"
-          public-address: ec2-23-22-225-54.compute-1.amazonaws.com
-    wordpress:
-      charm: cs:precise/wordpress-12
-      exposed: true
-      relations:
-        db:
-        - mysql
-        loadbalancer:
-        - wordpress
-      units:
-        wordpress/0:
-          agent-state: started
-          agent-version: 1.10.0
-          machine: "2"
-          public-address: ec2-54-224-220-210.compute-1.amazonaws.com
-    </code></pre>
+      machine: "2"
+      public-address: ec2-54-224-220-210.compute-1.amazonaws.com
+</code></pre>
                             <p>There is quite a lot of information here. The first section, titled <strong>machines:</strong>, details all the instances which are currently running. For each
             you will see the version of Juju they are running, their hostname, instance id
             and the series or version of Ubuntu they are running.
@@ -349,12 +348,12 @@
                             <p>To remove all current deployments and clear everything in your cloud, you can
             run:</p>
                             <pre class="language-bash">
-    <code class="language-bash">juju destroy
-        <span class="token operator">-</span>environment
-        <span class="token operator">&lt;</span>environment
-        <span class="token operator">-</span>name
-        <span class="token operator">&gt;</span>
-    </code></pre>
+<code class="language-bash">juju destroy
+    <span class="token operator">-</span>environment
+    <span class="token operator">&lt;</span>environment
+    <span class="token operator">-</span>name
+    <span class="token operator">&gt;</span>
+</code></pre>
                             <p>Where <code>&lt;environment-name&gt;</code> is the name you gave the environment when you
             configured it. A warning will be displayed and the user will be prompted whether
             or not to continue. This action will remove everything in the specified
@@ -383,6 +382,7 @@
                     </aside>
                 </div>
 
+            </div>
             </div>
         <footer class="p-footer" role="contentinfo">
             <div class="row">

@@ -1,6 +1,19 @@
 
 @mixin t-layout {
+
+  * {
+    box-sizing: border-box; //temp until merged into VF upstream https://github.com/ubuntudesign/vanilla-framework/pull/609
+  }
+
   .row {
     max-width: 100%;
   }
+
+  @media (min-width: $breakpoint-medium) {
+    .l-col-main {
+      border-left: 1px solid $color-cool-grey;
+      padding-left: 1.5rem;
+    }
+  }
+
 }
