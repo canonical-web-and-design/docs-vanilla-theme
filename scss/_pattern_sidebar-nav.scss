@@ -41,6 +41,14 @@
         transform: scaleY(1);
       }
     }
+
+    &__top {
+      display: none;
+
+      @media (min-width: $breakpoint-medium) {
+        display: inline;
+      }
+    }
   }
 }
 

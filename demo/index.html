@@ -142,7 +142,7 @@
                         </li>
                     </ul>
                 <section>
-                    <a href="#">Back to top</a>
+                    <a class="p-sidebar-nav__top" href="#">Back to top</a>
                 </section>
             </nav>
         </div>
@@ -174,19 +174,19 @@
                             </h2>
                             <p>To install Juju, you simply need to grab the latest juju-core package from the
             PPA:</p>
-    <pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> add
-    <span class="token operator">-</span>apt
-    <span class="token operator">-</span>repository ppa
-    <span class="token punctuation">:</span>juju
-    <span class="token operator">/</span>stable
-    <span class="token function">sudo</span>
-    <span class="token function">apt-get</span> update
-    <span class="token operator">&amp;&amp;</span>
-    <span class="token function">sudo</span>
-    <span class="token function">apt-get</span>
-    <span class="token function">install</span> juju
-    <span class="token operator">-</span>core
-    </code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> add
+<span class="token operator">-</span>apt
+<span class="token operator">-</span>repository ppa
+<span class="token punctuation">:</span>juju
+<span class="token operator">/</span>stable
+<span class="token function">sudo</span>
+<span class="token function">apt-get</span> update
+<span class="token operator">&amp;&amp;</span>
+<span class="token function">sudo</span>
+<span class="token function">apt-get</span>
+<span class="token function">install</span> juju
+<span class="token operator">-</span>core
+</code></pre>
                             <p>For more information on installing and the current versions available, see <a href="reference-releases">the releases page</a>.
                             </p>
                             <h2>Mac OSX <a href="#mac-osx"></a>
@@ -382,20 +382,22 @@ wordpress:
                         </main>
                     </div>
                     <aside class="col-2">
-                        <h4>Contents</h4>
-                        <nav>
-                            <ol>
-                                <li>
-                                    <a href="#installation">Installation</a>
-                                </li>
-                                <li>
-                                    <a href="#configuring">Configuring</a>
-                                </li>
-                                <li>
-                                    <a href="#testing-your-setup">Testing your setup</a>
-                                </li>
-                            </ol>
-                        </nav>
+                        <div class="p-toc">
+                            <h4 class="p-toc__header">Contents</h4>
+                            <nav>
+                                <ol class="p-toc__list">
+                                    <li>
+                                        <a href="#installation">Installation</a>
+                                    </li>
+                                    <li>
+                                        <a href="#configuring">Configuring</a>
+                                    </li>
+                                    <li>
+                                        <a href="#testing-your-setup">Testing your setup</a>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
                     </aside>
                 </div>
 
