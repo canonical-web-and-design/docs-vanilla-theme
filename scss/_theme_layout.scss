@@ -1,19 +1,50 @@
 
 @mixin t-layout {
 
-  * {
-    box-sizing: border-box; //temp until merged into VF upstream https://github.com/ubuntudesign/vanilla-framework/pull/609
-  }
-
-  .row {
+  .row { // override grid max width for full width pages
     max-width: 100%;
+    width: 100%;
+    padding: 0;
   }
 
-  @media (min-width: $breakpoint-medium) {
-    .l-col-main {
-      border-left: 1px solid $color-cool-grey;
-      padding-left: 1.5rem;
+  .theme {
+
+    @media (min-width: $breakpoint-medium) {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    &__wrap {
+      @media (min-width: $breakpoint-medium) {
+        display: flex;
+      }
+    }
+
+    &__main {
+      padding: 0 1rem;
+      display: flex;
+      flex: 1;
+
+      @media (min-width: $breakpoint-medium) {
+        border-left: 1px solid $color-cool-grey;
+        margin-left: 0;
+        padding: 1rem;
+      }
+    }
+
+    &__aside {
+      padding: 0 1rem;
+    }
+
+    &__aside,
+    &__sidebar {
+      flex: 0 0 16em;
+    }
+
+    &__versions {
+      border-bottom: 1px dotted $color-cool-grey;
+      padding: 0 1rem;
     }
   }
-
 }

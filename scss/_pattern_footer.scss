@@ -3,5 +3,10 @@
 
   .p-footer {
     border-top: 1px solid $color-cool-grey;
+    padding: 1rem;
+
+    @media (min-width: $breakpoint-medium) {
+      padding: 0 1rem;
+    }
   }
 }

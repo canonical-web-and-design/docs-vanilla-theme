@@ -10,7 +10,7 @@
     <!-- stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="../build/css/build.css" />
 </head>
-<body>
+<body class="theme">
     <header class="p-navigation" role="banner">
         <div class="p-navigation__logo">
             <a class="p-navigation__link" href="#">
@@ -24,19 +24,22 @@
         </nav>
     </header>
     <div class="row">
-        <div class="col-3">
+        <div class="theme__wrap">
+            <div class="col-3 theme__sidebar">
             <nav class="p-sidebar-nav">
-                <ul class="p-inline-list--middot">
-                    <li class="p-inline-list__item">
-                        <a href="#">1.25</a>
-                    </li>
-                    <li class="p-inline-list__item">
-                        <a href="#">devel</a>
-                    </li>
-                    <li class="p-inline-list__item">
-                        <a href="#">stable</a>
-                    </li>
-                </ul>
+                <div class="theme__versions">
+                    <ul class="p-inline-list--middot">
+                        <li class="p-inline-list__item">
+                            <a href="#">1.25</a>
+                        </li>
+                        <li class="p-inline-list__item">
+                            <a href="#">devel</a>
+                        </li>
+                        <li class="p-inline-list__item">
+                            <a href="#">stable</a>
+                        </li>
+                    </ul>
+                </div>
 
                 <ul class="p-sidebar-nav__list">
                     <li class="p-sidebar-nav__group">
@@ -140,13 +143,12 @@
                             </section>
                         </li>
                     </ul>
-                <section>
-                    <a class="p-sidebar-nav__top" href="#">Back to top</a>
+                <section class="p-sidebar-nav__top">
+                    <a href="#">Back to top</a>
                 </section>
             </nav>
         </div>
-        <div class="col-9 l-col-main">
-            <div class="col-7">
+            <div class="col-7 theme__main">
                 <main id="main-content">
                         <h1>Introduction</h1>
                         <p class="p-note--warning">
@@ -379,26 +381,26 @@ wordpress/0:
         including configuring options and managing running systems.
                         </p>
                     </main>
-                </div>
-                <aside class="col-2">
-                    <div class="p-toc">
-                        <h4 class="p-toc__header">Contents</h4>
-                        <nav>
-                            <ol class="p-toc__list">
-                                <li>
-                                    <a href="#installation">Installation</a>
-                                </li>
-                                <li>
-                                    <a href="#configuring">Configuring</a>
-                                </li>
-                                <li>
-                                    <a href="#testing-your-setup">Testing your setup</a>
-                                </li>
-                            </ol>
-                        </nav>
-                    </div>
-                </aside>
             </div>
+            <aside class="col-2 theme__aside">
+                <div class="p-toc">
+                    <h4 class="p-toc__header">Contents</h4>
+                    <nav>
+                        <ol class="p-toc__list">
+                            <li>
+                                <a href="#installation">Installation</a>
+                            </li>
+                            <li>
+                                <a href="#configuring">Configuring</a>
+                            </li>
+                            <li>
+                                <a href="#testing-your-setup">Testing your setup</a>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </aside>
+        </div>
         </div>
         <footer class="p-footer" role="contentinfo">
             <div class="row">

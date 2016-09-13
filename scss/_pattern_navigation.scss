@@ -6,6 +6,10 @@
     border-bottom: 1px solid $color-cool-grey;
     color: $color-dark;
 
+    &__link {
+      margin: 0;
+    }
+
     &__logo {
       color: $color-dark;
       font-size: 1.5rem;
