@@ -10,20 +10,18 @@
       list-style: none;
       padding-left: 0;
       width: 100%;
+      margin: 0 0 1rem;
 
       & & { // only target nested .p-sidebar-nav__list
         padding-left: 1rem;
+        margin: 0 0 1rem;
       }
     }
 
     &__group {
       border-bottom: 1px dotted $color-dark;
-      margin: 1rem -1rem;
+      margin: 1rem 0;
       padding: 0 1rem;
-
-      &:first-child {
-        border-top: 1px dotted $color-dark;
-      }
     }
 
     &__section {
