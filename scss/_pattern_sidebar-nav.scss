@@ -14,7 +14,21 @@
 
       & & { // only target nested .p-sidebar-nav__list
         margin: 0 0 1rem;
-        padding-left: 1rem;
+        padding-left: 0;
+
+        .p-sidebar-nav__link {
+          padding-left: 1rem;
+          display: inline-block;
+        }
+      }
+    }
+
+    &__link {
+      border-bottom: 0;
+      margin-bottom: .5rem;
+
+      &.is-active {
+        border-left: 3px solid $color-brand;
       }
     }
 
@@ -29,7 +43,6 @@
       position: relative;
       transform: scaleY(0);
       transform-origin: top;
-      transition: transform .5s ease;
 
       &:target {
         background-clip: padding-box;

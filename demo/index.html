@@ -6,7 +6,7 @@
     <meta name="keywords" content="" />
     <meta name="author" content="Canonical webteam" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Docs Vanilla theme | pattern library</title>
+    <title>Docs Vanilla theme | Demo page</title>
     <!-- stylesheets -->
     <link rel="stylesheet" type="text/css" media="screen" href="../build/css/build.css" />
 </head>
@@ -49,13 +49,13 @@
                         <section id="introduction" class="p-sidebar-nav__section">
                             <ul class="p-sidebar-nav__list">
                                 <li>
-                                    <a href="/docs/snaps/intro">What is a snap?</a>
+                                    <a class="p-sidebar-nav__link is-active" href="/docs/snaps/intro">What is a snap?</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/snaps/structure">Snaps directory structure</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/snaps/structure">Snaps directory structure</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/snaps/metadata">Metadata YAML file</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/snaps/metadata">Metadata YAML file</a>
                                 </li>
                             </ul>
                         </section>
@@ -67,25 +67,25 @@
                         <section id="core" class="p-sidebar-nav__section">
                             <ul class="p-sidebar-nav__list">
                                 <li>
-                                    <a href="/docs/core/install">Install</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/core/install">Install</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/core/usage">Usage</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/core/usage">Usage</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/core/store">Snap stores</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/core/store">Snap stores</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/core/snapd">The snapd system</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/core/snapd">The snapd system</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/core/interfaces">Interfaces (plugs and slots)</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/core/interfaces">Interfaces (plugs and slots)</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/core/updates">Transactional updates</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/core/updates">Transactional updates</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/core/versions">Mutiple snaps versions &amp; garbage collection</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/core/versions">Mutiple snaps versions &amp; garbage collection</a>
                                 </li>
                             </ul>
                         </section>
@@ -97,28 +97,28 @@
                         <section id="build-snaps" class="p-sidebar-nav__section">
                             <ul class="p-sidebar-nav__list">
                                 <li>
-                                    <a href="/docs/build-snaps/your-first-snap">Your first snap</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/your-first-snap">Your first snap</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/build-snaps/syntax">Snapcraft syntax</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/syntax">Snapcraft syntax</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/build-snaps/parts">Parts</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/parts">Parts</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/build-snaps/plugins">Plugins</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/plugins">Plugins</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/build-snaps/metadata">Commands, daemons and assets</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/metadata">Commands, daemons and assets</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/build-snaps/debugging">Debugging</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/debugging">Debugging</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/build-snaps/publish">Publish your snap</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/publish">Publish your snap</a>
                                 </li>
                                 <li>
-                                    <a href="/docs/build-snaps/advanced-features">Advanced features</a>
+                                    <a class="p-sidebar-nav__link" href="/docs/build-snaps/advanced-features">Advanced features</a>
                                 </li>
                             </ul>
                         </section>
@@ -131,13 +131,13 @@
                             <section id="reference" class="p-sidebar-nav__section">
                                 <ul class="p-sidebar-nav__list">
                                     <li>
-                                        <a href="/docs/reference/snapcraft">Snapcraft</a>
+                                        <a class="p-sidebar-nav__link" href="/docs/reference/snapcraft">Snapcraft</a>
                                     </li>
                                     <li>
-                                        <a href="/docs/reference/plugins">Plugins</a>
+                                        <a class="p-sidebar-nav__link" href="/docs/reference/plugins">Plugins</a>
                                     </li>
                                     <li>
-                                        <a href="/docs/reference/interfaces">Interfaces</a>
+                                        <a class="p-sidebar-nav__link" href="/docs/reference/interfaces">Interfaces</a>
                                     </li>
                                 </ul>
                             </section>
@@ -153,7 +153,7 @@
                         <h1>Introduction</h1>
                         <p class="p-note--warning">
                             <strong>Note:</strong> If you've arrived here from Xenial you should read the docs for
-                            <a href="/docs/devel/getting-started">Juju 2.0</a>
+                            <a class="p-sidebar-nav__link" href="/docs/devel/getting-started">Juju 2.0</a>
                         </p>
                         <p>This tutorial will explain how to get started with Juju, including installing,
         configuring, and bootstrapping a new Juju environment. Prerequisites include:</p>
@@ -188,7 +188,7 @@
 <span class="token function">install</span> juju
 <span class="token operator">-</span>core
 </code></pre>
-                        <p>For more information on installing and the current versions available, see <a href="reference-releases">the releases page</a>.
+                        <p>For more information on installing and the current versions available, see <a class="p-sidebar-nav__link" href="reference-releases">the releases page</a>.
                         </p>
                         <h2>Mac OSX <a href="#mac-osx"></a>
                         </h2>
@@ -204,7 +204,7 @@
                             <a href="reference-releases">the releases page</a>.
                         </p>
                         <h2 id="windows">Windows
-                            <a class="anchor" href="#windows"></a>
+                            <a href="#windows"></a>
                         </h2>
                         <p>See
                             <a href="reference-releases">the releases page</a> to download and run the
@@ -243,11 +243,11 @@
                             <strong>Note:</strong> Juju's command line interface includes documentation, running
 <code>juju help</code> will show you the topics. You can also look at the
 
-                            <a href="https://github.com/juju/cheatsheet">Juju command cheatsheet</a> if you are
+                            <a class="p-sidebar-nav__link" href="https://github.com/juju/cheatsheet">Juju command cheatsheet</a> if you are
         looking for a convenient command guide.
                         </p>
                         <h1 id="testing-your-setup">Testing your setup
-                            <a href="#testing-your-setup"></a>
+                            <a class="p-sidebar-nav__link" href="#testing-your-setup"></a>
                         </h1>
                         <p>The first step is to create a bootstrap environment. This is a cloud instance
         that Juju will use to deploy and manage services. It will be created according
@@ -361,7 +361,7 @@ wordpress/0:
                         <p>Congratulations, you have just deployed a service with Juju!</p>
                         <p>Now you are ready to deploy whatever service you want from the 100s
         available at the
-                            <a href="https://jujucharms.com">Juju Charm Store.</a>.
+                            <a class="p-sidebar-nav__link" href="https://jujucharms.com">Juju Charm Store.</a>.
                         </p>
                         <p>To remove all current deployments and clear everything in your cloud, you can
         run:</p>
