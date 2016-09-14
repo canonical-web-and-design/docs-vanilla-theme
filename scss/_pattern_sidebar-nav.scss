@@ -1,0 +1,67 @@
+
+@mixin p-sidebar-nav {
+
+  .p-sidebar-nav {
+
+    margin: 0 auto;
+    width: 100%;
+
+    &__list {
+      list-style: none;
+      margin: 0 0 1rem;
+      padding-left: 0;
+      width: 100%;
+
+      & & { // only target nested .p-sidebar-nav__list
+        margin: 0 0 1rem;
+        padding-left: 0;
+      }
+
+      & & .p-sidebar-nav__link { // only target links within nested .p-sidebar-nav__list
+        display: inline-block;
+        padding-left: 1rem;
+      }
+    }
+
+    &__link {
+      border-bottom: 0;
+      margin-bottom: .5rem;
+
+      &.is-active {
+        border-left: 3px solid $color-brand;
+      }
+    }
+
+    &__group {
+      border-bottom: 1px dotted $color-dark;
+      margin: 1rem 0;
+      padding: 0 1rem;
+    }
+
+    &__section {
+      height: 0;
+      position: relative;
+      transform: scaleY(0);
+      transform-origin: top;
+
+      &:target {
+        background-clip: padding-box;
+        border-top: 100px solid transparent; // Prevent browser head-butting [1]
+        height: auto;
+        margin-top: -116px;
+        transform: scaleY(1);
+      }
+    }
+
+    &__top {
+      display: none;
+      margin: 0 1rem 1rem;
+
+      @media (min-width: $breakpoint-medium) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// [1] // http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/#method-D

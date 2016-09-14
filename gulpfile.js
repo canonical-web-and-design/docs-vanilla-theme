@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     notify = require('gulp-notify'),
     gutil = require('gulp-util'),
-    scsslint = require('gulp-scss-lint'),
+    sassLint = require('gulp-sass-lint'),
     minifycss = require('gulp-minify-css'),
     sassdoc = require('sassdoc'),
     util = require('util');
@@ -25,17 +25,16 @@ function throwSassError(sassError) {
 /* Gulp instructions start here */
 gulp.task('help', function() {
     console.log('sass - Generate the min and unminified css from sass');
-    console.log('docs - Generate the docs from the source sass');
     console.log('build - Generate css and docs');
     console.log('watch - Watch sass files and generate unminified css');
     console.log('test - Lints Sass');
 });
 
 gulp.task('sasslint', function() {
-    var path = (gutil.env.file)? gutil.env.file : '**/*.scss';
-    return gulp.src('scss/' + path)
-        .pipe(scsslint())
-        .pipe(scsslint.failReporter());
+    return gulp.src('scss/**/*.s+(a|c)ss')
+      .pipe(sassLint())
+      .pipe(sassLint.format())
+      .pipe(sassLint.failOnError())
 });
 
 gulp.task('sass', function() {
@@ -51,12 +50,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('build/css/'));
 });
 
-gulp.task('docs', function() {
-    return gulp.src('scss/**/*.scss')
-        .pipe(sassdoc({ 'dest': 'build/docs'}));
-});
-
-gulp.task('build', ['sasslint', 'sass', 'docs']);
+gulp.task('build', ['sasslint', 'sass']);
 
 gulp.task('sass-lite', function() {
     return gulp.src('scss/build.scss')

@@ -1,0 +1,46 @@
+
+@mixin p-note {
+  @include p-note-default;
+  @include p-note-warning;
+  @include p-note-error;
+  @include p-note-success;
+}
+
+%note-pattern {
+  border-radius: 2px;
+  color: inherit;
+  padding: 1rem;
+}
+
+@mixin p-note-default {
+  .p-note {
+    @extend %note-pattern;
+    background-color: $color-light-grey;
+    border: 1px solid $color-mid-grey;
+    color: $color-cool-grey;
+  }
+}
+
+@mixin p-note-warning {
+  .p-note--warning {
+    @extend %note-pattern;
+    background-color: lighten($color-warning, 40%);
+    border: 1px solid $color-warning;
+  }
+}
+
+@mixin p-note-error {
+  .p-note--error {
+    @extend %note-pattern;
+    background-color: lighten($color-negative, 40%);
+    border: 1px solid $color-negative;
+  }
+}
+
+@mixin p-note-success {
+  .p-note--success {
+    @extend %note-pattern;
+    background-color: lighten($color-positive, 40%);
+    border: 1px solid $color-positive;
+  }
+}
