@@ -15,11 +15,11 @@
       & & { // only target nested .p-sidebar-nav__list
         margin: 0 0 1rem;
         padding-left: 0;
+      }
 
-        .p-sidebar-nav__link {
-          padding-left: 1rem;
-          display: inline-block;
-        }
+      & & .p-sidebar-nav__link { // only target links within nested .p-sidebar-nav__list
+        display: inline-block;
+        padding-left: 1rem;
       }
     }
 
