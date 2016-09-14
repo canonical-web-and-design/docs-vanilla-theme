@@ -46,5 +46,15 @@
       border-bottom: 1px dotted $color-cool-grey;
       padding: 0 1rem;
     }
+
+    &__outline {
+      border: 1px solid $color-cool-grey;
+    }
+
+    &__outline--inner {
+      border: 1px dotted $color-cool-grey;
+      margin: 1rem;
+      padding: 1rem;
+    }
   }
 }
