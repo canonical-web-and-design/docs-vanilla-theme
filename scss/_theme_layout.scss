@@ -5,6 +5,10 @@
     max-width: 100%;
     padding: 0;
     width: 100%;
+
+    & & { // Nested .rows (for code examples) need right/left padding
+      padding: 0 $grid-gutter-width;
+    }
   }
 
   .theme {
