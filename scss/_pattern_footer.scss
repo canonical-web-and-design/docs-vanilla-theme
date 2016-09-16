@@ -2,11 +2,12 @@
 @mixin p-footer {
 
   .p-footer {
-    border-top: 1px solid $color-cool-grey;
-    padding: 1rem;
+    border-top: 1px solid $color-mid-grey;
+    color: $color-mid-grey;
+    padding: 1rem 1rem 0;
 
     @media (min-width: $breakpoint-medium) {
-      padding: 0 1rem;
+      padding: 1.5rem 1.5rem 0;
     }
   }
 }
