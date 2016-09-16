@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sassLint = require('gulp-sass-lint'),
     minifycss = require('gulp-minify-css'),
-    sassdoc = require('sassdoc'),
     util = require('util');
 
 /* Helper functions */
