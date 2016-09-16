@@ -6,7 +6,6 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     sassLint = require('gulp-sass-lint'),
     minifycss = require('gulp-minify-css'),
-    sassdoc = require('sassdoc'),
     util = require('util');
 
 /* Helper functions */
@@ -37,11 +36,14 @@ gulp.task('sasslint', function() {
       .pipe(sassLint.failOnError())
 });
 
+var sassImportPaths = ['node_modules'];
+
 gulp.task('sass', function() {
     return gulp.src('scss/**/*.scss')
         .pipe(sass({
             style: 'expanded',
-            onError: throwSassError
+            onError: throwSassError,
+            includePaths: sassImportPaths
         }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
         .pipe(gulp.dest('build/css/'))
@@ -54,7 +56,7 @@ gulp.task('build', ['sasslint', 'sass']);
 
 gulp.task('sass-lite', function() {
     return gulp.src('scss/build.scss')
-        .pipe(sass({ style: 'expanded', errLogToConsole: true }))
+        .pipe(sass({ style: 'expanded', errLogToConsole: true, includePaths: sassImportPaths }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
         .pipe(gulp.dest('build/css/'));
 });
