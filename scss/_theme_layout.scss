@@ -31,14 +31,26 @@
       padding: 0 1rem;
 
       @media (min-width: $breakpoint-medium) {
-        border-left: 1px solid $color-cool-grey;
+        border-left: 1px solid $color-mid-grey;
         margin-left: 0;
-        padding: 1rem;
+        padding: 1rem 1.5rem;
       }
     }
 
+    &__img-links {
+
+      a {
+        border-bottom: 0;
+      }
+    }
+
+    &__inner {
+      max-width: $grid-max-width;
+      width: 100%;
+    }
+
     &__aside {
-      padding: 0 1rem;
+      padding: 1.75rem 1rem;
     }
 
     &__aside,
@@ -52,11 +64,11 @@
     }
 
     &__outline {
-      border: 1px solid $color-cool-grey;
+      border: 1px solid $color-mid-grey;
     }
 
     &__outline--inner {
-      border: 1px dotted $color-cool-grey;
+      border: 1px dotted $color-mid-grey;
       margin: 1rem;
       padding: 1rem;
     }

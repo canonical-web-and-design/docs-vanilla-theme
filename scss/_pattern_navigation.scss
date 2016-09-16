@@ -3,15 +3,15 @@
 
   .p-navigation {
     background: $color-light;
-    border-bottom: 1px solid $color-cool-grey;
-    color: $color-dark;
+    border-bottom: 1px solid $color-mid-grey;
+    color: $color-cool-grey;
 
     &__link {
       margin: 0;
     }
 
     &__logo {
-      color: $color-dark;
+      color: $color-cool-grey;
       font-size: 1.5rem;
     }
   }
