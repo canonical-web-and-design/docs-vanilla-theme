@@ -15,9 +15,9 @@
 @mixin p-note-default {
   .p-note {
     @extend %note-pattern;
-    background-color: $color-light-grey;
-    border: 1px solid $color-mid-grey;
-    color: $color-cool-grey;
+    background-color: $color-light;
+    border: 1px solid $color-mid-dark;
+    color: $color-dark;
   }
 }
 

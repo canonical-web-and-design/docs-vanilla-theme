@@ -2,8 +2,8 @@
 @mixin p-footer {
 
   .theme > .p-footer {
-    border-top: 1px solid $color-mid-grey;
-    color: $color-mid-grey;
+    border-top: 1px solid $color-mid-dark;
+    color: $color-mid-dark;
     padding: 1rem;
 
     @media (min-width: $breakpoint-medium) {
