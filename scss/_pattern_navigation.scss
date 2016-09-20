@@ -1,7 +1,7 @@
 
 @mixin p-navigation {
 
-  .p-navigation {
+  .theme > .p-navigation {
     background: $color-light;
     border-bottom: 1px solid $color-mid-grey;
     color: $color-cool-grey;

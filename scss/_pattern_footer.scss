@@ -1,7 +1,7 @@
 
 @mixin p-footer {
 
-  .p-footer {
+  .theme > .p-footer {
     border-top: 1px solid $color-mid-grey;
     color: $color-mid-grey;
     padding: 1rem;
