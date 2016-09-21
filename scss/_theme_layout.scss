@@ -31,7 +31,7 @@
       padding: 0 1rem;
 
       @media (min-width: $breakpoint-medium) {
-        border-left: 1px solid $color-mid-grey;
+        border-left: 1px solid $color-mid-dark;
         margin-left: 0;
         padding: 1rem 1.5rem;
       }
@@ -59,16 +59,16 @@
     }
 
     &__versions {
-      border-bottom: 1px dotted $color-cool-grey;
+      border-bottom: 1px dotted $color-dark;
       padding: 0 1rem;
     }
 
     &__outline {
-      border: 1px solid $color-mid-grey;
+      border: 1px solid $color-mid-dark;
     }
 
     &__outline--inner {
-      border: 1px dotted $color-mid-grey;
+      border: 1px dotted $color-mid-dark;
       margin: 1rem;
       padding: 1rem;
     }

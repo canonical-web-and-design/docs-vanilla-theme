@@ -2,18 +2,22 @@
 @mixin p-navigation {
 
   .theme > .p-navigation {
-    background: $color-light;
-    border-bottom: 1px solid $color-mid-grey;
-    color: $color-cool-grey;
+    background: $color-x-light;
+    border-bottom: 1px solid $color-mid-dark;
+    color: $color-dark;
+    padding: .5rem 0;
 
-    &__link {
+    .p-navigation__link {
       margin: 0;
+      color: $color-dark;
+
+      &:visited {
+        color: $color-mid-dark;
+      }
     }
 
-    &__logo {
-      color: $color-cool-grey;
-      font-size: 1.5rem;
+    .p-navigation__logo {
+      color: $color-dark;
     }
   }
-
 }
