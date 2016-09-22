@@ -48,6 +48,6 @@
     "gulp-util": "3.0.4"
   },
   "dependencies": {
-     "vanilla-framework": "1.0.0-rc3"
+     "vanilla-framework": "1.0.0"
   }
 }
