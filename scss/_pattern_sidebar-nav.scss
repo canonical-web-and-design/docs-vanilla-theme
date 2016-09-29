@@ -39,6 +39,10 @@
       }
     }
 
+    &__group > &__link:last-child {
+      margin-bottom: 0;
+    }
+
     &__top {
       display: none;
       margin: 0 1rem 1rem;
