@@ -15,10 +15,11 @@
 
     &__list &__list &__link {
       display: inline-block;
+      padding-left: 1rem;
     }
 
     &__list &__list &__list &__link {
-      padding-left: 1rem;
+      padding-left: 2rem;
     }
 
     &__link {
