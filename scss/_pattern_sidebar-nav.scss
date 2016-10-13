@@ -8,19 +8,18 @@
 
     &__list {
       list-style: none;
-      margin: 0 0 1rem;
+      margin: 0;
       padding-left: 0;
       width: 100%;
+    }
 
-      & & { // only target nested .p-sidebar-nav__list
-        margin: 0 0 1rem;
-        padding-left: 0;
-      }
+    &__list &__list &__link {
+      display: inline-block;
+      padding-left: 1rem;
+    }
 
-      & & .p-sidebar-nav__link { // only target links within nested .p-sidebar-nav__list
-        display: inline-block;
-        padding-left: 1rem;
-      }
+    &__list &__list &__list &__link {
+      padding-left: 2rem;
     }
 
     &__link {
@@ -34,8 +33,8 @@
 
     &__group {
       border-bottom: 1px dotted $color-mid-dark;
-      margin: 1rem 0;
-      padding: 0 1rem;
+      margin: 0;
+      padding: 1rem;
 
       @media (min-width: $breakpoint-medium) {
         &:last-child {
