@@ -1,20 +1,36 @@
-%p-versions-item {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
 @mixin docs-p-versions {
   .p-versions {
     list-style: none;
     margin: 0;
     padding: 0;
 
+    &__link {
+      color: $text-color;
+
+      &:visited {
+        color: $text-color;
+      }
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+
     &__item {
-      @extend %p-versions-item;
+      &,
+      &--current,
+      &--missing {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+
+      &--current {
+        font-weight: normal;
+      }
 
       &--missing {
-        @extend %p-versions-item;
-        opacity: .5;
+        color: $color-mid-dark;
+        text-decoration: line-through;
       }
     }
   }
