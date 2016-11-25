@@ -2,8 +2,8 @@
 @import 'vanilla-framework/scss/settings_assets';
 @import 'vanilla-framework/scss/settings_breakpoints';
 @import 'vanilla-framework/scss/settings_colors';
-@import 'vanilla-framework/scss/settings_grid';
 @import 'vanilla-framework/scss/settings_font';
+@import 'vanilla-framework/scss/settings_grid';
 
 // Import Vanilla base styles
 @import 'vanilla-framework/scss/base_blockquotes';
@@ -51,3 +51,4 @@
   @include docs-p-sidebar-nav;
   @include docs-p-toc;
 }
+
