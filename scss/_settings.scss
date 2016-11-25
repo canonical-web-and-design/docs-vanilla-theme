@@ -1,0 +1,10 @@
+// Import settings from vanilla
+@import 'vanilla-framework/scss/settings_assets';
+@import 'vanilla-framework/scss/settings_breakpoints';
+@import 'vanilla-framework/scss/settings_colors';
+@import 'vanilla-framework/scss/settings_font';
+@import 'vanilla-framework/scss/settings_grid';
+
+// Theme settings
+$link-color: $color-information !default;
+$text-color: $color-dark !default;
