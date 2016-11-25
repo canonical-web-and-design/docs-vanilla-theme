@@ -1,3 +1,6 @@
+// import Vanilla
+@import 'vanilla-framework/scss/patterns_grid';
+
 @mixin docs-p-grid {
   .row { // override grid max width for full width pages
     max-width: 100%;
