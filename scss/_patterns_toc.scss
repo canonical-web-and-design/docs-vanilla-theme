@@ -4,5 +4,19 @@
     list-style: none;
     margin: 0;
     padding: 0;
+
+    &__link {
+      border-bottom: 0;
+      color: $text-color;
+      margin-bottom: .5rem;
+
+      &:visited {
+        color: $text-color;
+      }
+
+      &:hover {
+        color: $link-color;
+      }
+    }
   }
 }
