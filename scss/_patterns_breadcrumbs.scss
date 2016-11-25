@@ -1,0 +1,36 @@
+@import 'vanilla-framework/scss/patterns_breadcrumbs';
+
+@mixin docs-p-breadcrumbs {
+  @include vf-p-breadcrumbs;
+
+  .p-breadcrumbs {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+
+    &__link {
+      color: $text-color;
+      font-weight: 300;
+
+      &:visited {
+        color: $text-color;
+      }
+
+      &:hover {
+        color: $link-color;
+      }
+
+      &--active {
+        font-weight: normal;
+
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      display: none;
+    }
+  }
+}
