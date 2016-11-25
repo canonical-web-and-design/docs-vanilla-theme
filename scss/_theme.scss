@@ -5,13 +5,13 @@
 @import 'theme_layout';
 
 // vanilla overrides
-@import 'pattern_navigation';
-@import 'pattern_footer';
+@import 'patterns_navigation';
+@import 'patterns_footer';
 
 // theme specific patterns
-@import 'pattern_note';
-@import 'pattern_sidebar-nav';
-@import 'pattern_toc';
+@import 'patterns_note';
+@import 'patterns_sidebar-nav';
+@import 'patterns_toc';
 
 @mixin docs-vanilla-theme {
   @include vanilla;
