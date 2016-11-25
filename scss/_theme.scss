@@ -16,9 +16,9 @@
 @mixin docs-vanilla-theme {
   @include vanilla;
   @include t-layout;
-  @include p-footer;
-  @include p-note;
-  @include p-navigation;
-  @include p-sidebar-nav;
-  @include p-toc;
+  @include docs-p-footer;
+  @include docs-p-note;
+  @include docs-p-navigation;
+  @include docs-p-sidebar-nav;
+  @include docs-p-toc;
 }
