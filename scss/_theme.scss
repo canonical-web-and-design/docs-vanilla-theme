@@ -20,6 +20,7 @@
 @import 'vanilla-framework/scss/base_typography';
 
 // import theme patterns
+@import 'base_code';
 @import 'patterns_layout';
 @import 'patterns_navigation';
 @import 'patterns_footer';
@@ -43,6 +44,7 @@
   @include vf-b-typography;
 
   // Theme patterns
+  @include docs-b-code;
   @include docs-p-layout;
   @include docs-p-footer;
   @include docs-p-grid;
