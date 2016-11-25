@@ -28,6 +28,7 @@
 @import 'patterns_social-list';
 @import 'patterns_sidebar-nav';
 @import 'patterns_toc';
+@import 'patterns_versions';
 
 @mixin docs-vanilla-theme {
   // Vanilla base styles
@@ -56,5 +57,6 @@
   @include docs-p-sidebar-nav;
   @include docs-p-social-list;
   @include docs-p-toc;
+  @include docs-p-versions;
 }
 
