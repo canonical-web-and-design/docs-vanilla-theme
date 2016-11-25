@@ -2,7 +2,7 @@
 @import 'vanilla-framework/scss/vanilla';
 
 // theme layout
-@import 'theme_layout';
+@import 'patterns_layout';
 
 // vanilla overrides
 @import 'patterns_navigation';
@@ -16,7 +16,7 @@
 
 @mixin docs-vanilla-theme {
   @include vanilla;
-  @include t-layout;
+  @include docs-p-layout;
   @include docs-p-footer;
   @include docs-p-grid;
   @include docs-p-note;
