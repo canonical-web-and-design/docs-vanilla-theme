@@ -1,22 +1,8 @@
 // Table of contents pattern
 @mixin docs-p-toc {
   .p-toc {
-    @media (min-width: $breakpoint-medium) {
-      border-left: 1px solid $color-dark;
-      padding-left: 1rem;
-    }
-
-    &__header {
-      color: $color-mid-dark;
-      font-size: .875rem;
-      margin-bottom: .5rem;
-      text-transform: uppercase;
-    }
-
-    &__list {
-      list-style: none;
-      margin: 0;
-      padding: 0 0 1rem;
-    }
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }

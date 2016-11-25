@@ -25,15 +25,15 @@
 
     &__logo {
       color: $color-dark;
-      margin-top: 0;
       margin-bottom: 0;
+      margin-top: 0;
     }
 
     &__image {
-      height: 32px;
-      margin: 0 1rem 0 0;
       display: block;
       float: left;
+      height: 32px;
+      margin: 0 1rem 0 0;
       vertical-align: middle;
     }
   }
