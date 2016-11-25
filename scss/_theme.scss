@@ -20,6 +20,7 @@
 @import 'base_links';
 @import 'patterns_aside';
 @import 'patterns_breadcrumbs';
+@import 'patterns_aside';
 @import 'patterns_layout';
 @import 'patterns_navigation';
 @import 'patterns_footer';
@@ -47,6 +48,7 @@
   @include docs-b-links;
   @include docs-p-aside;
   @include docs-p-breadcrumbs;
+  @include docs-p-aside;
   @include docs-p-layout;
   @include docs-p-footer;
   @include docs-p-grid;
