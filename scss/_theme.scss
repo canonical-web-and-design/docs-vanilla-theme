@@ -7,6 +7,7 @@
 // vanilla overrides
 @import 'patterns_navigation';
 @import 'patterns_footer';
+@import 'patterns_grid';
 
 // theme specific patterns
 @import 'patterns_note';
@@ -17,6 +18,7 @@
   @include vanilla;
   @include t-layout;
   @include docs-p-footer;
+  @include docs-p-grid;
   @include docs-p-note;
   @include docs-p-navigation;
   @include docs-p-sidebar-nav;
