@@ -24,7 +24,6 @@
 @import 'patterns_navigation';
 @import 'patterns_footer';
 @import 'patterns_grid';
-@import 'patterns_note';
 @import 'patterns_sidebar-nav';
 @import 'patterns_toc';
 
@@ -46,9 +45,7 @@
   @include docs-p-layout;
   @include docs-p-footer;
   @include docs-p-grid;
-  @include docs-p-note;
   @include docs-p-navigation;
   @include docs-p-sidebar-nav;
   @include docs-p-toc;
 }
-
