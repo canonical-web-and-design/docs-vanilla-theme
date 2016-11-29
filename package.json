@@ -1,6 +1,6 @@
 {
   "name": "docs-vanilla-theme",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The Vanilla theme for documentation, style guides and APIs",
   "author": {
     "name": "Anthony Dillon",
@@ -48,6 +48,6 @@
     "gulp-util": "3.0.4"
   },
   "dependencies": {
-     "vanilla-framework": "1.0.0"
+     "vanilla-framework": "1.0.1"
   }
 }

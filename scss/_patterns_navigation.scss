@@ -1,7 +1,12 @@
+// import Vanilla
+@import 'vanilla-framework/scss/utilities_clearfix';
+@import 'vanilla-framework/scss/patterns_navigation';
 
-@mixin p-navigation {
+@mixin docs-p-navigation {
+  @include vf-u-clearfix;
+  @include vf-p-navigation;
 
-  .theme > .p-navigation {
+  .p-navigation {
     background: $color-x-light;
     border-bottom: 1px solid $color-mid-dark;
     color: $color-dark;

@@ -1,18 +1,5 @@
-
-@mixin t-layout {
-
-  .row { // override grid max width for full width pages
-    max-width: 100%;
-    padding: 0;
-    width: 100%;
-
-    & & { // Nested .rows (for code examples) need right/left padding
-      padding: $grid-gutter-width;
-    }
-  }
-
-  .theme {
-
+@mixin docs-p-layout {
+  .p-layout {
     @media (min-width: $breakpoint-medium) {
       display: flex;
       flex-direction: column;
@@ -38,7 +25,6 @@
     }
 
     &__img-links {
-
       a {
         border-bottom: 0;
       }

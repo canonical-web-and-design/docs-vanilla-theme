@@ -1,8 +1,6 @@
 // Table of contents pattern
-@mixin p-toc {
-
+@mixin docs-p-toc {
   .p-toc {
-
     @media (min-width: $breakpoint-medium) {
       border-left: 1px solid $color-dark;
       padding-left: 1rem;
