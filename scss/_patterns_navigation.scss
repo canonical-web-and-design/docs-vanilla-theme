@@ -10,7 +10,9 @@
     background: $color-x-light;
     border-bottom: 1px solid $color-mid-dark;
     color: $color-dark;
-    padding: .5rem 0;
+    line-height: 32px;
+    padding: 7.5px 0;
+
 
     .p-navigation__link {
       color: $color-dark;
@@ -21,8 +23,18 @@
       }
     }
 
-    .p-navigation__logo {
+    &__logo {
       color: $color-dark;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &__image {
+      height: 32px;
+      margin: 0 1rem 0 0;
+      display: block;
+      float: left;
+      vertical-align: middle;
     }
   }
 }

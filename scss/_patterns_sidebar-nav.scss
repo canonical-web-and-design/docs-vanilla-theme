@@ -1,3 +1,10 @@
+%p-sidebar-nav-toggle {
+  cursor: pointer;
+  float: right;
+  padding: .5em 0;
+  width: .6em;
+}
+
 @mixin docs-p-sidebar-nav {
   .p-sidebar-nav {
     margin: 0 auto;
@@ -27,6 +34,32 @@
         border-left: 3px solid $color-brand;
       }
     }
+
+    &__toggle--expand {
+      @extend %p-sidebar-nav-toggle;
+    }
+
+    &__toggle--collapse {
+      @extend %p-sidebar-nav-toggle;
+      filter: FlipV;
+      transform: scaleY(-1);
+    }
+
+    &__header {
+      @media (min-width: $breakpoint-medium) {
+        font-size: 1.3125rem;
+      }
+      margin-bottom: 0;
+    }
+
+    &__header + &__section {
+      margin-top: 1rem;
+    }
+
+    &__section--collapsed {
+      display: none;
+    }
+
 
     &__group {
       border-bottom: 1px dotted $color-mid-dark;

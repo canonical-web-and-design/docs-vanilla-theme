@@ -13,6 +13,7 @@
     <header class="p-navigation" role="banner">
         <div class="p-navigation__logo">
             <a class="p-navigation__link" href="#">
+                <img class="p-navigation__image" src="https://assets.ubuntu.com/v1/c5cb0f8e-picto-ubuntu.svg" alt="Documentation logo">
                 vanilla docs theme
             </a>
         </div>
@@ -24,7 +25,10 @@
                 <ul class="p-sidebar-nav__list">
                     <li class="p-sidebar-nav__group">
                         <a href="#section1">
-                            <h4 class="p-sidebar-nav__header">Section title 1</h4>
+                            <h4 class="p-sidebar-nav__header">
+                                <img class="p-sidebar-nav__toggle--collapse" src="https://assets.ubuntu.com/v1/04d2075a-chevron_down.svg" />
+                                Section title 1
+                            </h4>
                         </a>
                         <section id="section1" class="p-sidebar-nav__section">
                             <ul class="p-sidebar-nav__list">
@@ -42,9 +46,12 @@
                     </li>
                     <li class="p-sidebar-nav__group">
                         <a href="#section2">
-                            <h4 class="p-sidebar-nav__header">Section title 2</h4>
+                            <h4 class="p-sidebar-nav__header">
+                                <img class="p-sidebar-nav__toggle--expand" src="https://assets.ubuntu.com/v1/04d2075a-chevron_down.svg" />
+                                Section title 2
+                            </h4>
                         </a>
-                        <section id="section2" class="p-sidebar-nav__section">
+                        <section id="section2" class="p-sidebar-nav__section--collapsed">
                             <ul class="p-sidebar-nav__list">
                                 <li>
                                     <a class="p-sidebar-nav__link" href="#4">Adipisicing elit</a>
@@ -101,6 +108,8 @@
                             <section id="section4" class="p-sidebar-nav__section">
                                 <ul class="p-sidebar-nav__list">
                                     <li>
+                                        <img class="p-sidebar-nav__toggle--collapse" src="https://assets.ubuntu.com/v1/04d2075a-chevron_down.svg" />
+
                                         <a class="p-sidebar-nav__link" href="#16">Elit quo</a>
 
                                         <section id="section5" class="p-sidebar-nav__section">
@@ -115,7 +124,20 @@
                                         </section>
                                     </li>
                                     <li>
+                                        <img class="p-sidebar-nav__toggle--expand" src="https://assets.ubuntu.com/v1/04d2075a-chevron_down.svg" />
+
                                         <a class="p-sidebar-nav__link" href="#19">Adipisicing eiciendis</a>
+
+                                        <section id="section5" class="p-sidebar-nav__section--collapsed">
+                                            <ul class="p-sidebar-nav__list">
+                                                <li>
+                                                    <a class="p-sidebar-nav__link" href="#17">Lorem quo</a>
+                                                </li>
+                                                <li>
+                                                    <a class="p-sidebar-nav__link" href="#18">Dolor eisciendis</a>
+                                                </li>
+                                            </ul>
+                                        </section>
                                     </li>
                                     <li>
                                         <a class="p-sidebar-nav__link" href="#20">Quo magnam eiciendis</a>
@@ -216,6 +238,28 @@
         </div>
         <footer class="p-footer" role="contentinfo">
             <div class="row">
+                <ul class="p-social-list">
+                    <li class="p-social-list__item">
+                        <a href="http://youtube.com/jujucharms" class="p-social-list__link">
+                            <img class="p-social-list__image" src="https://assets.ubuntu.com/v1/cd9b9981-youtube-social.svg" alt="Juju on Youtube" />
+                        </a>
+                    </li>
+                    <li class="p-social-list__item">
+                        <a href="https://plus.google.com/106305712267007929608/posts" class="p-social-list__link">
+                            <img class="p-social-list__image" src="https://assets.ubuntu.com/v1/ff889486-google-social.svg" alt="Juju on Google+" />
+                        </a>
+                    </li>
+                    <li class="p-social-list__item">
+                        <a href="http://www.twitter.com/ubuntucloud" class="p-social-list__link">
+                            <img class="p-social-list__image" src="https://assets.ubuntu.com/v1/6bfc6710-twitter-social.svg" alt="Ubuntu Cloud on Twitter" />
+                        </a>
+                    </li>
+                    <li class="p-social-list__item">
+                        <a href="http://www.facebook.com/ubuntucloud" class="p-social-list__link">
+                            <img class="p-social-list__image" src="https://assets.ubuntu.com/v1/ae5e5732-facebook-social.svg" alt="Ubuntu Cloud on Facebook" />
+                        </a>
+                    </li>
+                </ul>
                 <div class="col-12">
                     <p>&copy; 2016 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</p>
                 </div>

@@ -20,10 +20,12 @@
 @import 'vanilla-framework/scss/base_typography';
 
 // import theme patterns
+@import 'base_code';
 @import 'patterns_layout';
 @import 'patterns_navigation';
 @import 'patterns_footer';
 @import 'patterns_grid';
+@import 'patterns_social-list';
 @import 'patterns_sidebar-nav';
 @import 'patterns_toc';
 
@@ -42,10 +44,13 @@
   @include vf-b-typography;
 
   // Theme patterns
+  @include docs-b-code;
   @include docs-p-layout;
   @include docs-p-footer;
   @include docs-p-grid;
   @include docs-p-navigation;
   @include docs-p-sidebar-nav;
+  @include docs-p-social-list;
   @include docs-p-toc;
 }
+

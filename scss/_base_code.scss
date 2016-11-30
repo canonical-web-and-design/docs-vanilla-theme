@@ -1,0 +1,16 @@
+@mixin docs-b-code {
+  pre {
+    background-color: $color-light;
+    border: 1px solid $color-mid-light;
+    border-radius: 4px;
+    color: $color-dark;
+    font-family: Ubuntu Mono;
+    font-size: 1em;
+    font-weight: 300;
+    margin: .5em 0;
+    overflow: hidden;
+    padding: .7em 1em;
+    position: relative;
+    width: 100%;
+  }
+}
