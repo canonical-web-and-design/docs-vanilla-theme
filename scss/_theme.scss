@@ -20,6 +20,7 @@
 @import 'base_links';
 @import 'patterns_aside';
 @import 'patterns_breadcrumbs';
+@import 'patterns_aside';
 @import 'patterns_layout';
 @import 'patterns_navigation';
 @import 'patterns_footer';
@@ -27,6 +28,7 @@
 @import 'patterns_social-list';
 @import 'patterns_sidebar-nav';
 @import 'patterns_toc';
+@import 'patterns_versions';
 
 @mixin docs-vanilla-theme {
   // Vanilla base styles
@@ -47,6 +49,7 @@
   @include docs-b-links;
   @include docs-p-aside;
   @include docs-p-breadcrumbs;
+  @include docs-p-aside;
   @include docs-p-layout;
   @include docs-p-footer;
   @include docs-p-grid;
@@ -54,5 +57,5 @@
   @include docs-p-sidebar-nav;
   @include docs-p-social-list;
   @include docs-p-toc;
+  @include docs-p-versions;
 }
-

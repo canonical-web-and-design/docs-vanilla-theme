@@ -1,0 +1,37 @@
+@mixin docs-p-versions {
+  .p-versions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__link {
+      color: $text-color;
+
+      &:visited {
+        color: $text-color;
+      }
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+
+    &__item {
+      &,
+      &--current,
+      &--missing {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+
+      &--current {
+        font-weight: normal;
+      }
+
+      &--missing {
+        color: $color-mid-dark;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
