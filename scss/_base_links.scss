@@ -1,0 +1,33 @@
+@mixin docs-b-links {
+  a {
+    border-bottom: 0;
+    color: $link-color;
+    font-weight: inherit;
+
+    &:visited {
+      color: $link-color;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    color: $text-color;
+    font-weight: normal;
+
+    &:visited {
+      color: $text-color;
+    }
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+}

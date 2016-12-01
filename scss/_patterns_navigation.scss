@@ -14,12 +14,12 @@
     padding: 7.5px 0;
 
 
-    .p-navigation__link {
+    &__link {
       color: $color-dark;
       margin: 0;
 
       &:visited {
-        color: $color-mid-dark;
+        color: $color-dark;
       }
     }
 

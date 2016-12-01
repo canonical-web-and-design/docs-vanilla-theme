@@ -19,19 +19,36 @@
 
     &__list &__list &__link {
       display: inline-block;
-      padding-left: 1rem;
     }
 
     &__list &__list &__list &__link {
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
 
     &__link {
       border-bottom: 0;
+      color: $text-color;
+      font-weight: 300;
       margin-bottom: .5rem;
 
+      &:visited {
+        color: $text-color;
+      }
+
+      &:hover {
+        color: $link-color;
+      }
+
+      &:visited {
+        color: $color-dark;
+      }
+
+      &:hover {
+        color: $color-information;
+      }
+
       &.is-active {
-        border-left: 3px solid $color-brand;
+        font-weight: normal;
       }
     }
 

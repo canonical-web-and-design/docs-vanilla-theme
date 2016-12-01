@@ -1,9 +1,5 @@
 // Settings
-@import 'vanilla-framework/scss/settings_assets';
-@import 'vanilla-framework/scss/settings_breakpoints';
-@import 'vanilla-framework/scss/settings_colors';
-@import 'vanilla-framework/scss/settings_font';
-@import 'vanilla-framework/scss/settings_grid';
+@import 'settings';
 
 // Import Vanilla base styles
 @import 'vanilla-framework/scss/base_blockquotes';
@@ -21,6 +17,7 @@
 
 // import theme patterns
 @import 'base_code';
+@import 'base_links';
 @import 'patterns_aside';
 @import 'patterns_layout';
 @import 'patterns_navigation';
@@ -46,6 +43,7 @@
 
   // Theme patterns
   @include docs-b-code;
+  @include docs-b-links;
   @include docs-p-aside;
   @include docs-p-layout;
   @include docs-p-footer;
