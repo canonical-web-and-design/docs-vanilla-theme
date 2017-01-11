@@ -1,4 +1,4 @@
-# Docs theme for vanilla framework
+# Vanilla Docs Theme
 
 ```bash
 npm i
